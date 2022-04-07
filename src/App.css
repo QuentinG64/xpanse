@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "Mandatory";
+  src: url("../assets/font/MandatoryPlaything.ttf");
+}
+
+@font-face {
+  font-family: "Inter-Light";
+  src: url("../assets/font/Inter-Light.ttf");
+}
+
+@font-face {
+  font-family: "Inter-Bold";
+  src: url("../assets/font/Inter-Bold.ttf");
+}

@@ -11,3 +11,20 @@ const NavBar = () => {
 };
 
 export default NavBar;
+
+// HOW TO PROPTYPES LES BEEE GEES
+
+// ------------------------
+
+// import PropTypes from "prop-types";
+
+// component-name.propTypes = {
+//   props1-name: PropTypes.arrayOf([
+//     PropTypes.shape({
+//       proprité1: PropTypes.string,
+//       propriété2: PropTypes.string,
+//     }),
+//   ]).isRequired,
+// };
+
+// export default component-name;
