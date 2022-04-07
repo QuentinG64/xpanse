@@ -435,3 +435,5 @@ const dataAstro = [
     first_flight: "2021-06-17T01:22:00Z",
   },
 ];
+
+export default dataAstro;
