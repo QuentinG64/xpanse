@@ -1,10 +1,12 @@
 import "./App.css";
-import NavBar from "./components/NavBar";
-s;
+import CardRecruiter from "./components/CardRecruiter";
+
 function App() {
   return (
-    <div className="App">
-      <NavBar />
+    <div>
+      <div className="App h-screen w-screen bg-main-1">
+        <CardRecruiter />
+      </div>
     </div>
   );
 }

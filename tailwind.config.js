@@ -15,6 +15,13 @@ module.exports = {
         "main-1": "#0A0B0A",
         "main-2": "#FFF",
         "main-3": "#8C8C8C",
+        "free-card-top": "#AE7641",
+        "free-card-bot": "#BFBFBF",
+        "mission-card-top": "#7F98AE",
+        "mission-card-bot": "#BFBFBF",
+      },
+      boxShadow: {
+        "5xl": "20px 20px 50px rgba(0, 0, 0, 0.5)",
       },
     },
   },
