@@ -1,11 +1,11 @@
 import "./App.css";
-import CardRecruiter from "./components/CardRecruiter";
+import RecruiterPage from "./components/RecruiterPage";
 
 function App() {
   return (
     <div>
       <div className="App h-screen w-screen bg-main-1">
-        <CardRecruiter />
+        <RecruiterPage />
       </div>
     </div>
   );
