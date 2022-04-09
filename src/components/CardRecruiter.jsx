@@ -16,7 +16,6 @@ const CardRecruiter = (props) => {
             <h2 className="text-main-2 font-title text-center text-sm mt-3">
               {props.name}
             </h2>
-            {/* To replace with state (isFavorite, isNotFavorite) */}
             <img
               onClick={heartClickFavorite}
               src={
