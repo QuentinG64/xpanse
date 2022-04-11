@@ -1,10 +1,12 @@
 import "./App.css";
+import GoldenTicket from "./components/GoldenTicket";
 import NavBar from "./components/NavBar";
-s;
+
 function App() {
   return (
-    <div className="App">
+    <div className="App h-screen w-screen">
       <NavBar />
+      <GoldenTicket />
     </div>
   );
 }
