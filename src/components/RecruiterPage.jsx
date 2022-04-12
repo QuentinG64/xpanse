@@ -9,11 +9,11 @@ const RecruiterPage = () => {
       <div className="absolute mt-32">
         <FilterRecruiter />
       </div>
-      <div className="flex justify-center items-center ">
-        <div className="flex flex-wrap h-screen pt-24 justify-center items-center gap-5 w-4/6">
+      <div className="flex justify-center items-center w-4/6 ml-96 ">
+        <div className="flex flex-wrap h-screen pt-24 justify-start items-cente gap-5 w-full">
           {dataAstros
             .map((astro, index) => <CardRecruiter key={index} {...astro} />)
-            .slice(0, 8)}
+            .slice(0, 6)}
         </div>
       </div>
     </div>
