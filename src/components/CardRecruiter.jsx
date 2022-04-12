@@ -36,14 +36,37 @@ const CardRecruiter = (props) => {
             />
           </div>
 
-          <div className="relative font-primary text-left w-full pl-4">
+          <div className="relative font-primary text-left w-full pl-4 pr-4 pb-2">
             <p className="dataCard">Nationality: {props.nationality}</p>
             <p className="dataCard">Date of birth: {props.date_of_birth}</p>
             <p className="dataCard">Agency: {props.agency.country_code}</p>
             <p className="dataCard">Status: {props.status.name}</p>
-            {/* <p className="dataCard">
-              {props.twitter ? " Twitter: " + props.twitter : null}
-            </p> */}
+            {/* TWITTER & INSTAGRAM PROPS */}
+            <div className="flex flex-row justify-evenly gap-5 align-center">
+              <p className="font-second">
+                {props.twitter ? (
+                  <a
+                    className="text-blue-400 text-xs pb-10"
+                    href={props.twitter}
+                    target="_blank"
+                  >
+                    Twitter
+                  </a>
+                ) : null}
+              </p>
+
+              <p className="font-second">
+                {props.instagram ? (
+                  <a
+                    className="text-pink-400 text-xs"
+                    href={props.instagram}
+                    target="_blank"
+                  >
+                    Instagram
+                  </a>
+                ) : null}
+              </p>
+            </div>
           </div>
 
           <button className="cursor-pointer text-xs mb-3 rounded-2xl px-4 py-1 bg-white bg-opacity-50 hover:bg-white hover:bg-opacity-80 ">
