@@ -6,9 +6,9 @@ import Countdown from "./Countdown.jsx";
 const GoldenTicket = () => {
   return (
     <div className="h-screen bg-cover bg-[url('../assets/images/goldenTicketBg.png')] text-main-2">
-      <h1 className="font-title text-main-2 text-6xl w-9/12 pt-20 pl-6">
+      <h1 className="font-title text-main-2 text-6xl w-9/12 pt-32 pl-6">
         {" "}
-        WILL YOU'LL BE THE NEXT SPACE EXPLORER ?
+        WILL YOU BE THE NEXT SPACE EXPLORER ?
       </h1>
       <h2 className="font-title text-main-2 text-3xl pt-20 pb-10 pl-6">
         Next laucnh in{" "}
