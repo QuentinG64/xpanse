@@ -11,10 +11,10 @@ const NavBar = () => {
             <Link to="/Freelance">FREELANCE</Link>
           </li>
           <li className="pr-20 hover:underline decoration-solid decoration-primary-1">
-            <Link to="/Recruiter">RECRUITER</Link>
+            <Link to="/RecruiterPage">RECRUITER</Link>
           </li>
           <li className="pr-20 hover:underline decoration-solid decoration-primary-1">
-            <Link to="/GoldenTicket">GOLDEN TICKET</Link>
+            <Link to="/goldenticket">GOLDEN TICKET</Link>
           </li>
           <li className="hover:underline decoration-solid decoration-primary-1">
             <Link to="/AboutUs">ABOUT US</Link>
