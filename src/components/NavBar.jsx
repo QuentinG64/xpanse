@@ -17,6 +17,7 @@ const NavBar = () => {
         </li>
         <li className=" hover:underline decoration-solid decoration-primary-1">
           <Link to="/AboutUs">ABOUT US</Link>
+
         </li>
       </ul>
     </nav>
