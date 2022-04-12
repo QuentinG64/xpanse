@@ -16,3 +16,7 @@
   font-family: "Inter-Bold";
   src: url("../assets/font/Inter-Bold.ttf");
 }
+
+.dataCard {
+  @apply text-main-2 font-primary text-xs my-3;
+}
