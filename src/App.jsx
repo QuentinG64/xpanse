@@ -1,5 +1,3 @@
-/* eslint-disable prettier/prettier */
-/* eslint-disable import/no-unresolved */
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import GoldenTicket from "./components/GoldenTicket";
@@ -9,7 +7,6 @@ import Countdown from "./components/Countdown";
 // import Freelance from "./components/Freelance";
 // import Recruiter from "./components/Recruiter";
 // import AboutUs from "./components/AboutUs";
-
 
 function App() {
   return (
