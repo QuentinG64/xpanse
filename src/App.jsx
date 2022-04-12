@@ -4,7 +4,7 @@ import NavBar from "./components/NavBar";
 
 function App() {
   return (
-    <div className="App h-screen w-screen">
+    <div className="App h-screen w-screen bg-main-1">
       <NavBar />
       <GoldenTicket />
     </div>

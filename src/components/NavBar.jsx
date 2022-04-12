@@ -1,18 +1,18 @@
 const NavBar = () => {
   return (
-    <nav className="font-title flex justify-between bg-none">
-      <p className="flex text-2xl ml-7">Xpanse</p>
-      <ul className="mr-10 space-x-4 text-black flex justify-around bg-none">
-        <li className="pr-20 hover:underline decoration-solid decoration-primary-1">
+    <nav className="pt-4 font-title flex justify-between bg-transparent h-8">
+      <p className="text-2xl ml-7 text-main-2">Xpanse</p>
+      <ul className="mr-10 space-x-4 text-main-2 flex justify-around">
+        <li className="pr-20 hover:underline decoration-primary-1">
           FREELANCE
         </li>
-        <li className="pr-20 hover:underline decoration-solid decoration-primary-1">
+        <li className="pr-20 hover:underline decoration-primary-1">
           RECRUITER
         </li>
-        <li className="pr-20 hover:underline decoration-solid decoration-primary-1">
+        <li className="pr-20 hover:underline decoration-primary-1">
           GOLDEN TICKET
         </li>
-        <li className=" hover:underline decoration-solid decoration-primary-1">
+        <li className="hover:underline decoration-primary-1">
           ABOUT US
         </li>
       </ul>
