@@ -11,7 +11,7 @@ import Countdown from "./components/Countdown";
 function App() {
   return (
     <Router>
-      <div className="App h-screen w-screen">
+      <div className="App h-screen w-screen bg-main-1">
         <NavBar />
         <GoldenTicket />
         <Routes>
@@ -19,7 +19,6 @@ function App() {
         </Routes>
       </div>
     </Router>
-
   );
 }
 
