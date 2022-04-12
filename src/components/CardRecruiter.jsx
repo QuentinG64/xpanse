@@ -13,7 +13,7 @@ const CardRecruiter = (props) => {
       <div className="w-56 h-80 rounded-2xl bg-gradient-to-t from-free-card-bot/30 to-free-card-top/80 bg-opacity-10 backdrop-blur-lg relative z-2 shadow-5xl border border-opacity-5 border-r-0 border-b-0 backdrop-filter hover:border-2 ease-in duration-100">
         <div className="h-full w-full flex flex-col justify-around items-center ">
           <div className="flex justify-between items-center w-full px-2">
-            <h2 className="text-main-2 font-title text-center text-sm mt-3">
+            <h2 className="text-main-2 font-title text-center text-sm mt-3 text-transparent bg-clip-text bg-gradient-to-r from-white to-orange-500/90">
               {props.name}
             </h2>
             <img
