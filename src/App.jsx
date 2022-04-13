@@ -8,6 +8,7 @@ import AboutUs from "./components/AboutUs";
 
 // => COMPOSANTS PAS ENCORE CRÉÉS <= //
 // import Freelance from "./components/Freelance";
+// import PreHome from "./components/PreHome";
 
 function App() {
   return (
@@ -27,4 +28,4 @@ export default App;
 // => ROUTES A AJOUTER LORSQUE LES COMPOSANTS SERONT CRÉÉS <= //
 
 // <Route path="/Freelance" element={<Freelance />} />
-// <Route path="/Recruiter" element={<Recruiter />} />
+// <Route path="/PreHome" element={<PreHome />} />
