@@ -7,7 +7,7 @@ const NavBar = () => {
     <div className="fixed w-full z-50">
       <nav className="font-title flex justify-between bg-transparent text-main-2 pt-6">
         <p className="ml-7">
-          <Link to="/prehome">
+          <Link to="/">
             <Phrase margin={15} size={20} color="white">
               <Char char="X" delay={0} />
               <Char char="P" delay={0.9} />

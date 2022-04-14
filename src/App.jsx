@@ -8,12 +8,12 @@ import Freelance from "./components/FreelancePage";
 import RecruiterPage from "./components/RecruiterPage";
 import AboutUs from "./components/AboutUs";
 
-
 function App() {
   return (
     <div className="App h-screen w-screen bg-main-1">
+      <NavBar />
       <Routes>
-      <Route path="/" element={<PreHome />} />
+        <Route path="/" element={<PreHome />} />
         <Route path="/freelance" element={<Freelance />} />
         <Route path="/goldenticket" element={<GoldenTicket />} />
         <Route path="/RecruiterPage" element={<RecruiterPage />} />
