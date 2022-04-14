@@ -1,40 +1,40 @@
+import React from "react";
+import { Link } from "react-router-dom";
+import { Phrase, Char } from "animatedtxt";
+
 const NavBar = () => {
   return (
-    <nav className="font-title flex justify-between bg-none">
-      <p className="flex text-2xl ml-7">Xpanse</p>
-      <ul className="mr-10 space-x-4 text-black flex justify-around bg-none">
-        <li className="pr-20 hover:underline decoration-solid decoration-primary-1">
-          FREELANCE
-        </li>
-        <li className="pr-20 hover:underline decoration-solid decoration-primary-1">
-          RECRUITER
-        </li>
-        <li className="pr-20 hover:underline decoration-solid decoration-primary-1">
-          GOLDEN TICKET
-        </li>
-        <li className=" hover:underline decoration-solid decoration-primary-1">
-          ABOUT US
-        </li>
-      </ul>
-    </nav>
+    <div className="fixed w-full z-50">
+      <nav className="font-title flex justify-between bg-transparent text-main-2 pt-6">
+        <p className="ml-7">
+          <Link to="/">
+            <Phrase margin={15} size={20} color="white">
+              <Char char="X" delay={0} />
+              <Char char="P" delay={0.9} />
+              <Char char="A" delay={0.6} />
+              <Char char="N" delay={0.8} />
+              <Char char="S" delay={0.8} />
+              <Char char="E" delay={1} />
+            </Phrase>{" "}
+          </Link>
+        </p>
+        <ul className="mr-10 space-x-4 flex justify-around bg-transparent">
+          <li className="pr-20 hover:underline decoration-solid decoration-primary-1">
+            <Link to="/freelance">FREELANCE</Link>
+          </li>
+          <li className="pr-20 hover:underline decoration-solid decoration-primary-1">
+            <Link to="/recruiterpage">RECRUITER</Link>
+          </li>
+          <li className="pr-20 hover:underline decoration-solid decoration-primary-1">
+            <Link to="/goldenticket">GOLDEN TICKET</Link>
+          </li>
+          <li className="hover:underline decoration-solid decoration-primary-1">
+            <Link to="/aboutus">ABOUT US</Link>
+          </li>
+        </ul>
+      </nav>
+    </div>
   );
 };
 
 export default NavBar;
-
-// HOW TO PROPTYPES LES BEEE GEES
-
-// ------------------------
-
-// import PropTypes from "prop-types";
-
-// component-name.propTypes = {
-//   props1-name: PropTypes.arrayOf([
-//     PropTypes.shape({
-//       proprité1: PropTypes.string,
-//       propriété2: PropTypes.string,
-//     }),
-//   ]).isRequired,
-// };
-
-// export default component-name;
