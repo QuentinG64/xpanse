@@ -1,6 +1,7 @@
 import React from "react"
 import Button from "./Button"
 import {useNavigate} from 'react-router-dom'
+import { Phrase, Char } from "animatedtxt";
 
 
 const Prehome = () => {
@@ -16,8 +17,18 @@ const Prehome = () => {
         <div>
             <div className="bg-main-1">
                 <div className="w-screen flex flex-col items-center">
-                    <img className="mt-5 w-1/2" src="../assets/images/xpanseLogoMainPage.png" alt="Logo"></img>
-                    <h3 className="text-main-2"> Spatial recruitment plateform</h3>
+                    <h1>
+                    <Phrase margin={50} size={80} color="white">
+              <Char char="X" delay={0} />
+              <Char char="P" delay={0.9} />
+              <Char char="A" delay={0.6} />
+              <Char char="N" delay={0.8} />
+              <Char char="S" delay={0.8} />
+              <Char char="E" delay={1} />
+            </Phrase>{" "}
+                    </h1>
+                    {/* <img className="mt-5 w-1/2" src="../assets/images/xpanseLogoMainPage.png" alt="Logo"></img> */}
+                    <h3 className="font-title-second text-main-3 mt-6"> Spatial recruitment plateform</h3>
                 </div>
                 <div className="flex">
                     <div className="filter grayscale hover:filter-none w-1/2 h-screen bg-cover bg-[url('../assets/images/FreelanceMainPic3.png')]">
