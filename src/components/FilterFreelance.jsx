@@ -3,7 +3,7 @@ import Checkbox from "./Checkbox";
 import RadioBox from "./RadioBox";
 import SelectBox from "./SelectBox";
 
-const FilterRecruiter = () => {
+const FilterFreelance = () => {
   // const [checkedOne, setCheckedOne] = useState(false);
   // const handleChangeOne = () => {
   //   setCheckedOne(!checkedOne);
@@ -51,4 +51,4 @@ const FilterRecruiter = () => {
   );
 };
 
-export default FilterRecruiter;
+export default FilterFreelance;
