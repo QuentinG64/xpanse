@@ -1,8 +1,8 @@
 import React from "react";
 import CardFreelance from "./CardFreelance";
-import dataAstros from "../data/dataAstros";
 import FilterFreelance from "./FilterFreelance";
 import NavBar from "./NavBar";
+import dataMission from "../data/dataMission";
 
 const FreelancePage = () => {
   return (
@@ -14,8 +14,8 @@ const FreelancePage = () => {
         </div>
         <div className="flex justify-center items-center ">
           <div className="flex flex-wrap bg-transparent pt-24 justify-end items-center gap-5 w-4/6">
-            {dataAstros
-              .map((astro, index) => <CardFreelance key={index} {...astro} />)
+            {dataMission
+              .map((data, index) => <CardFreelance key={index} {...data} />)
               .slice(0, 8)}
           </div>
         </div>
