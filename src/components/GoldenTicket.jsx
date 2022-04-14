@@ -1,13 +1,24 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from "react";
 import Button from "./Button";
 import Countdown from "./Countdown.jsx";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router";
 
 const GoldenTicket = () => {
+  // fonction retournant la variable message indiquant si c'est win ou loose
   const forTheWin = () => {
-    Math.random();
+    const result = Math.random();
+    return result;
   };
+
+  let navigate = useNavigate();
+  const loose = () => {
+    navigate("/goldenticket/loose");
+  };
+
+  const win = () => {
+    navigate("/goldenticket/win");
+  };
+
   return (
     // INITAL PAGE GOLDEN TICKET -- INTRODUCTION
     <div className="h-screen bg-cover bg-[url('../assets/images/goldenTicketBg.png')] text-main-2">
@@ -18,9 +29,18 @@ const GoldenTicket = () => {
         Next launch in
       </h2>
       <Countdown />
-      <Button text="HOW IS YOUR LUCK?" />
+      {/* Il faut qu'au click sur le component Button, en 
+      fonction du résultat forTheWin, cela m'affiche la page loose ou win */}
+      <div
+        // ici modifier la valeur dans le ternaire de result pour définir la probabilité de gain
+        onClick={() => {
+          forTheWin() >= 0.2 ? loose() : win();
+        }}
+      >
+        <Button text="HOW IS YOUR LUCK?" />
+      </div>
       <h3 className="font-title text-main-2 text-sm pt-5 pl-7">
-        Live stream here
+        Live stream <span className="text-lg">here</span>
       </h3>
     </div>
     // --------------------------
