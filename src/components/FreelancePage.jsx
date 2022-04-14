@@ -2,10 +2,12 @@ import React from "react";
 import CardFreelance from "./CardFreelance";
 import dataAstros from "../data/dataAstros";
 import FilterFreelance from "./FilterFreelance";
+import NavBar from "./NavBar";
 
 const FreelancePage = () => {
   return (
     <div className="h-screen w-screen">
+      <NavBar />
       <div className="flex flex-col bg-fixed bg-cover bg-[url('../assets/images/FreelanceBackground.png')]">
         <div className="absolute mt-32">
           <FilterFreelance />
