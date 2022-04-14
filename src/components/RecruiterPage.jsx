@@ -2,11 +2,12 @@ import React from "react";
 import CardRecruiter from "./CardRecruiter";
 import dataAstros from "../data/dataAstros";
 import FilterRecruiter from "./FilterRecruiter";
+import NavBar from "./NavBar";
 
 const RecruiterPage = () => {
   return (
-
     <div className="h-screen w-screen">
+      <NavBar />
       <div className="flex flex-col bg-cover bg-[url('../assets/images/recruiterBackground.png')] bg-fixed">
         <div className="absolute mt-32">
           <FilterRecruiter />

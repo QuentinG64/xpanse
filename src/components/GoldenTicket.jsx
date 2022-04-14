@@ -2,6 +2,7 @@
 import Button from "./Button";
 import Countdown from "./Countdown.jsx";
 import { useNavigate } from "react-router";
+import NavBar from "./NavBar";
 
 const GoldenTicket = () => {
   // fonction retournant la variable message indiquant si c'est win ou loose
@@ -22,6 +23,7 @@ const GoldenTicket = () => {
   return (
     // INITAL PAGE GOLDEN TICKET -- INTRODUCTION
     <div className="h-screen bg-cover bg-[url('../assets/images/goldenTicketBg.png')] text-main-2">
+      <NavBar />
       <h1 className="font-title text-main-2 text-6xl w-9/12 pt-32 pl-7">
         WILL YOU BE THE NEXT SPACE EXPLORER?
       </h1>
