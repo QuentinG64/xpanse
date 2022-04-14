@@ -1,6 +1,7 @@
 import "./App.css";
 // eslint-disable-next-line no-unused-vars
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
 import GoldenTicket from "./components/GoldenTicket";
 import NavBar from "./components/NavBar";
 import RecruiterPage from "./components/RecruiterPage";

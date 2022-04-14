@@ -1,13 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Phrase, Char } from "animatedtxt";
 
 const NavBar = () => {
   return (
     <div className="fixed w-full z-50">
       <nav className="font-title flex justify-between bg-transparent text-main-2 pt-6">
-        <p className="flex text-2xl ml-7">
-          {" "}
-          <Link to="/prehome">Xpanse</Link>
+        <p className="ml-7">
+          <Link to="/prehome">
+            <Phrase margin={15} size={20} color="white">
+              <Char char="X" delay={0} />
+              <Char char="P" delay={0.9} />
+              <Char char="A" delay={0.6} />
+              <Char char="N" delay={0.8} />
+              <Char char="S" delay={0.8} />
+              <Char char="E" delay={1} />
+            </Phrase>{" "}
+          </Link>
         </p>
         <ul className="mr-10 space-x-4 flex justify-around bg-transparent">
           <li className="pr-20 hover:underline decoration-solid decoration-primary-1">
