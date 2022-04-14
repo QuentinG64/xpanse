@@ -2,15 +2,16 @@ import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import GoldenTicket from "./components/GoldenTicket";
 import NavBar from "./components/NavBar";
-// => COMPOSANTS PAS ENCORE CRÉÉS <= //
+import PreHome from "./components/PreHome";
 import Freelance from "./components/FreelancePage";
 import RecruiterPage from "./components/RecruiterPage";
 // import AboutUs from "./components/AboutUs";
 
+
 function App() {
   return (
     <div className="App h-screen w-screen bg-main-1">
-      <NavBar />
+      <PreHome />
       <Routes>
         <Route path="/freelance" element={<Freelance />} />
         <Route path="/goldenticket" element={<GoldenTicket />} />
@@ -23,7 +24,7 @@ function App() {
 export default App;
 
 // => ROUTES A AJOUTER LORSQUE LES COMPOSANTS SERONT CRÉÉS <= //
-
+// <Route path="/PreHome" element={<PreHome />} />
 // <Route path="/Freelance" element={<Freelance />} />
 // <Route path="/Recruiter" element={<Recruiter />} />
 // <Route path="/AboutUs" element={<AboutUs />} />
