@@ -5,6 +5,7 @@ import FilterRecruiter from "./FilterRecruiter";
 
 const RecruiterPage = () => {
   return (
+
     <div className="h-screen w-screen">
       <div className="flex flex-col bg-cover bg-[url('../assets/images/recruiterBackground.png')] bg-fixed">
         <div className="absolute mt-32">
