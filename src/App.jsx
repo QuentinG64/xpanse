@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import GoldenTicket from "./components/GoldenTicket";
 import NavBar from "./components/NavBar";
 // => COMPOSANTS PAS ENCORE CRÉÉS <= //
-// import Freelance from "./components/Freelance";
+import Freelance from "./components/FreelancePage";
 import RecruiterPage from "./components/RecruiterPage";
 // import AboutUs from "./components/AboutUs";
 
@@ -12,6 +12,7 @@ function App() {
     <div className="App h-screen w-screen bg-main-1">
       <NavBar />
       <Routes>
+        <Route path="/freelance" element={<Freelance />} />
         <Route path="/goldenticket" element={<GoldenTicket />} />
         <Route path="/RecruiterPage" element={<RecruiterPage />} />
       </Routes>
