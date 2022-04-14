@@ -6,7 +6,10 @@ import NavBar from "./components/NavBar";
 import PreHome from "./components/PreHome";
 import Freelance from "./components/FreelancePage";
 import RecruiterPage from "./components/RecruiterPage";
+import TicketLoose from "./components/TicketLoose";
+import TicketWin from "./components/TicketWin";
 import AboutUs from "./components/AboutUs";
+
 
 function App() {
   return (
@@ -16,6 +19,8 @@ function App() {
         <Route path="/" element={<PreHome />} />
         <Route path="/freelance" element={<Freelance />} />
         <Route path="/goldenticket" element={<GoldenTicket />} />
+        <Route path="/goldenticket/loose" element={<TicketLoose />} />
+        <Route path="/goldenticket/win" element={<TicketWin />} />
         <Route path="/RecruiterPage" element={<RecruiterPage />} />
         <Route path="/AboutUs" element={<AboutUs />} />
       </Routes>
