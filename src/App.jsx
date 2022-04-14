@@ -11,8 +11,8 @@ import RecruiterPage from "./components/RecruiterPage";
 function App() {
   return (
     <div className="App h-screen w-screen bg-main-1">
-      <PreHome />
       <Routes>
+      <Route path="/" element={<PreHome />} />
         <Route path="/freelance" element={<Freelance />} />
         <Route path="/goldenticket" element={<GoldenTicket />} />
         <Route path="/RecruiterPage" element={<RecruiterPage />} />
