@@ -13,15 +13,7 @@
     "prop-types": "^15.8.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-<<<<<<< HEAD
     "react-router-dom": "^6.3.0"
-=======
-
-    "react-parallax-tilt": "^1.6.7",
-
-    "react-router-dom": "^6.3.0"
-
->>>>>>> 19bb8d06e31cf449c7d927362ccabb801689fb09
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^1.0.7",
