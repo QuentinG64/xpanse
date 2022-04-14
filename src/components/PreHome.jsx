@@ -16,8 +16,8 @@ const Prehome = () => {
     return (
         <div>
             <div className="bg-main-1">
-                <div className="w-screen flex flex-col items-center">
-                    <h1>
+                <div className=" w-screen flex flex-col items-center">
+                    <h1 className="mt-5">
                     <Phrase margin={50} size={80} color="white">
               <Char char="X" delay={0} />
               <Char char="P" delay={0.9} />
@@ -40,7 +40,7 @@ const Prehome = () => {
                         </div>
                     </div>
                     <div className="filter grayscale hover:filter-none ml-64 w-1/2 h-screen bg-cover bg-[url('../assets/images/recruiterMainPic.png')]">
-                        <div className=" mt-48 mr-auto">
+                        <div className="mt-48 ml-10 ">
                             <h3 className="text-main-2 "> I am more a</h3>
                             <div onClick={()=>{recruiter()}}>
                             <Button text="Recruiter"></Button>
