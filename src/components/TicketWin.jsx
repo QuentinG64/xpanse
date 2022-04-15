@@ -1,11 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Button from "./Button";
+import LoaderGoldenTicket from "./LoaderGoldenTicket";
+import NavBar from "./NavBar";
 
 const TicketWin = () => {
-  return (
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+  }, []);
+
+  return loading ? (
+    <LoaderGoldenTicket />
+  ) : (
     <div>
-      {/* SECOND PAGE GOLDEN TICKET -- LOOSE */}
+      {/* THIRD PAGE GOLDEN TICKET -- WIN */}
       <div className="h-screen bg-cover bg-[url('../assets/images/goldenTicketBg.png')] text-main-2">
+        <NavBar />
         <h1 className="font-title text-main-2 text-6xl w-9/12 pt-32 pl-7">
           <span className="text-8xl text-primary-1">WOOOOH!</span> <br /> YOU
           JUST
@@ -13,6 +25,9 @@ const TicketWin = () => {
           THE NEXT SPACE TRIP!
         </h1>
         <Button text="DOWNLOAD TICKET" />
+        <div className="h-90 w-90 absolute bottom-0 ml-80">
+          <img src="../../assets/images/snoop.gif" alt="win" />
+        </div>
       </div>
     </div>
   );

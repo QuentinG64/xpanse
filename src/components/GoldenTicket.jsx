@@ -41,6 +41,7 @@ const GoldenTicket = () => {
       >
         <Button text="HOW IS YOUR LUCK?" />
       </div>
+
       <h3 className="font-title text-main-2 text-sm pt-5 pl-7">
         Live stream <span className="text-lg">here</span>
       </h3>
