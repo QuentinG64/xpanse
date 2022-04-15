@@ -10,11 +10,9 @@ import TicketLoose from "./components/TicketLoose";
 import TicketWin from "./components/TicketWin";
 import AboutUs from "./components/AboutUs";
 
-
 function App() {
   return (
     <div className="App h-screen w-screen bg-main-1">
-      <NavBar />
       <Routes>
         <Route path="/" element={<PreHome />} />
         <Route path="/freelance" element={<Freelance />} />
