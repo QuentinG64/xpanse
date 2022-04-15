@@ -24,7 +24,9 @@ const TicketWin = () => {
           <span className="text-7xl text-primary-1">WIN A FREE TICKET</span> FOR
           THE NEXT SPACE TRIP!
         </h1>
-        <Button text="DOWNLOAD TICKET" />
+        <div className="pl-7 z-10 pt-5">
+          <Button text="DOWNLOAD TICKET" />
+        </div>
         <div className="h-90 w-90 absolute bottom-0 ml-80">
           <img src="../../assets/images/snoop.gif" alt="win" />
         </div>
