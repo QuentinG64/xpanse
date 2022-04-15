@@ -30,6 +30,7 @@ const TicketLoose = () => {
           <span className="text-7xl text-primary-1">TRY AGAIN!</span>
         </h1>
         <div
+          className="pl-7 z-10 pt-5"
           onClick={() => {
             tryAgain();
           }}
