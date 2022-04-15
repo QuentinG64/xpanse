@@ -34,6 +34,7 @@ const GoldenTicket = () => {
       {/* Il faut qu'au click sur le component Button, en 
       fonction du résultat forTheWin, cela m'affiche la page loose ou win */}
       <div
+        className="mt-10 pl-7"
         // ici modifier la valeur dans le ternaire de result pour définir la probabilité de gain
         onClick={() => {
           forTheWin() >= 0.2 ? loose() : win();
