@@ -15,18 +15,17 @@ const RecruiterPage = () => {
       .then((data) => {
         setAstros(data);
       })
-      .catch((err) => console.log(err))
+      .catch((err) => console.log(err));
   };
 
-  useEffect(() =>{
+  useEffect(() => {
     getAstro();
-  },[]);
+  }, []);
 
   return (
-
     <div className="h-screen w-screen">
       <NavBar />
-      <div className="flex flex-col bg-cover bg-[url('../assets/images/recruiterBackground.png')] bg-fixed">
+      <div className="flex flex-col bg-cover bg-[url('../assets/images/recruiterBackground.png')] bg-fixed h-screen">
         <div className="absolute mt-32">
           <FilterRecruiter />
         </div>
@@ -35,7 +34,7 @@ const RecruiterPage = () => {
           <div className="flex flex-wrap bg-transparent pt-24 justify-end items-center gap-5 w-4/6">
             {astros
               .map((astro, index) => <CardRecruiter key={index} {...astro} />)
-              .slice (0, 8)}
+              .slice(0, 8)}
           </div>
         </div>
       </div>
