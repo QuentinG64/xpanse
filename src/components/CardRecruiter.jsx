@@ -49,6 +49,7 @@ const CardRecruiter = (props) => {
                     className="text-blue-400 text-xs pb-10"
                     href={props.twitter}
                     target="_blank"
+                    rel="noreferrer"
                   >
                     Twitter
                   </a>
@@ -61,6 +62,7 @@ const CardRecruiter = (props) => {
                     className="text-pink-400 text-xs"
                     href={props.instagram}
                     target="_blank"
+                    rel="noreferrer"
                   >
                     Instagram
                   </a>
@@ -70,7 +72,7 @@ const CardRecruiter = (props) => {
           </div>
 
           <button className="cursor-pointer text-xs mb-3 rounded-2xl px-4 py-1 bg-white bg-opacity-50 hover:bg-white hover:bg-opacity-80 ">
-            <a href={props.wiki} target="_blank">
+            <a href={props.wiki} target="_blank" rel="noreferrer">
               READ MORE
             </a>
           </button>
