@@ -10,7 +10,7 @@ const CardFreelance = (props) => {
 
   return (
     <Tilt>
-      <div className="w-56 h-80 rounded-2xl bg-gradient-to-t from-gray-400/30 to-slate-600/80 bg-opacity-10 backdrop-blur-lg relative z-2 shadow-5xl border border-opacity-5 border-r-0 border-b-0 backdrop-filter hover:border-2 ease-in duration-100">
+      <div className="w-60 h-80 rounded-2xl bg-gradient-to-t from-slate-200/40 to-slate-600/70 bg-opacity-10 backdrop-blur-lg relative z-2 shadow-5xl border border-opacity-5 border-r-0 border-b-0 backdrop-filter hover:border-2 ease-in duration-100">
         <div className="h-full w-full flex flex-col justify-around items-center ">
           <div className="w-full px-2">
             <img
@@ -23,7 +23,7 @@ const CardFreelance = (props) => {
               alt="heart"
               className="cursor-pointer h-4 w-4 absolute top-2 right-3"
             />
-            <h1 className="text-main-2 font-title text-center text-sm mt-3 text-transparent bg-clip-text bg-gradient-to-r from-slate-200 to-slate-300">
+            <h1 className="text-main-2 font-title text-sm h-14 mt-3 mr-[10%] text-transparent bg-clip-text bg-gradient-to-r from-slate-200 to-slate-300">
               {props.launch_service_provider.name}
             </h1>
           </div>
@@ -36,14 +36,31 @@ const CardFreelance = (props) => {
             />
           </div> */}
 
-          <div className="relative font-primary text-left w-full pl-4 pr-4 pb-2">
-            <h2 className="text-main-2 font-primary text-center text-sm mt-3 text-transparent bg-clip-text bg-gradient-to-r from-slate-200 to-slate-300">
-              {props.name.mission}
+          <div className="relative font-primary text-left w-full pl-4 pr-4 mb-7 overflow-scroll">
+            <h2 className="text-main-2 font-primary h-10 text-sm mt-3 text-transparent bg-clip-text bg-gradient-to-r from-slate-200 to-slate-300">
+              {props.name}
             </h2>
-            <p className="dataCard">Nationality:</p>
-            <p className="dataCard">Date of birth: </p>
-            <p className="dataCard">Agency: </p>
-            <p className="dataCard">Status: </p>
+            <p className="dataCard">
+              {" "}
+              ⏱ {props.window_start
+                .slice(0, 10)
+                .split("-")
+                .reverse()
+                .join("/")}{" "}
+            </p>
+            <p className="dataCard">
+              🚀{" "}
+              <span className="font-second">
+                {props.rocket.configuration.name}
+              </span>
+            </p>
+            <p className="dataCard">📍 {props.pad.location.name} </p>
+            <p className="dataCard overflow-hidden pb-10">
+              📋{" "}
+              {props.mission
+                ? props.mission.description
+                : " For more information, contact us"}{" "}
+            </p>
             {/* TWITTER & INSTAGRAM PROPS */}
             <div className="flex flex-row justify-evenly gap-5 align-center">
               {/* <p className="font-second">
@@ -72,11 +89,11 @@ const CardFreelance = (props) => {
             </div>
           </div>
 
-          {/* <button className="cursor-pointer text-xs mb-3 rounded-2xl px-4 py-1 bg-white bg-opacity-50 hover:bg-white hover:bg-opacity-80 ">
-            <a href={props.wiki} target="_blank">
+          <button className="cursor-pointer text-xs mb-3 rounded-2xl px-4 py-1 bg-white bg-opacity-50 hover:bg-white hover:bg-opacity-80 ">
+            <a href={props.pad && props.pad.wiki_url} target="_blank">
               READ MORE
             </a>
-          </button> */}
+          </button>
         </div>
       </div>
     </Tilt>

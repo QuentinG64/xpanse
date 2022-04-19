@@ -14,7 +14,7 @@ const FilterFreelance = () => {
   //   setCheckedTwo(!checkedTwo);
   // };
   return (
-    <div className="border-2 rounded-xl h-auto px-4 py-2 fixed">
+    <div className="border-2 rounded-xl h-auto w-[22%] mb-12 px-4 py-2 fixed overflow-scroll">
       <h1 className="font-title text-main-2 text-lg">
         SELECT YOUR NEXT PARTNER
       </h1>
