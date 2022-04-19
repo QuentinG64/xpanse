@@ -12,7 +12,7 @@ const FreelancePage = () => {
         <div className="absolute mt-32">
           <FilterFreelance />
         </div>
-        <div className="flex justify-center items-center ml-[38%] mr-[1%]">
+        <div className="flex justify-center items-center ml-[30%] mr-[1%]">
           <div className="flex flex-wrap bg-transparent pt-24 items-center gap-5">
             {dataMission
               .map((data, index) => <CardFreelance key={index} {...data} />)
