@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Checkbox from "./Checkbox";
 import RadioBox from "./RadioBox";
-import SelectBoxFreelance from "./SelectBox";
+import SelectBoxFreelance from "./SelectBoxFreelance";
 
 const FilterFreelance = () => {
   // const [checkedOne, setCheckedOne] = useState(false);
