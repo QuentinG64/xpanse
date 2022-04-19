@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import Button from "./Button";
 import { useNavigate } from "react-router";
+import Button from "./Button";
 import NavBar from "./NavBar";
 import LoaderGoldenTicket from "./LoaderGoldenTicket";
 
 const TicketLoose = () => {
-  let navigate = useNavigate();
+  const navigate = useNavigate();
   const tryAgain = () => {
     navigate("/goldenticket");
   };

@@ -13,10 +13,10 @@ const FreelancePage = () => {
           <FilterFreelance />
         </div>
         <div className="flex justify-center items-center ml-[30%] mr-[1%]">
-          <div className="flex flex-wrap bg-transparent pt-24 items-center gap-5">
-            {dataMission
-              .map((data, index) => <CardFreelance key={index} {...data} />)
-              .slice(0, 8)}
+          <div className="flex flex-wrap bg-transparent pt-24 pb-12 items-center gap-5">
+            {dataMission.map((data, index) => (
+              <CardFreelance key={index} {...data} />
+            ))}
           </div>
         </div>
       </div>

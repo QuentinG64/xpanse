@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Checkbox from "./Checkbox";
 import RadioBox from "./RadioBox";
 import SelectBoxFreelance from "./SelectBoxFreelance";
+import ModalDate from "./ModalDate";
 
 const FilterFreelance = () => {
   // const [checkedOne, setCheckedOne] = useState(false);
@@ -13,6 +14,7 @@ const FilterFreelance = () => {
   // const handleChangeTwo = () => {
   //   setCheckedTwo(!checkedTwo);
   // };
+
   return (
     <div className="border-2 rounded-xl h-auto w-[22%] mb-12 px-4 py-2 fixed overflow-scroll">
       <h1 className="font-title text-main-2 text-lg">
@@ -35,9 +37,9 @@ const FilterFreelance = () => {
         </div>
         <div className="mt-7">
           <h2 className="font-title text-main-2 text-sm py-1">
-            FILTER BY SOCIAL NETWORK
+            FILTER BY DATE
           </h2>
-          <RadioBox />
+          <ModalDate />
         </div>
       </div>
     </div>

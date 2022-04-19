@@ -90,7 +90,11 @@ const CardFreelance = (props) => {
           </div>
 
           <button className="cursor-pointer text-xs mb-3 rounded-2xl px-4 py-1 bg-white bg-opacity-50 hover:bg-white hover:bg-opacity-80 ">
-            <a href={props.pad && props.pad.wiki_url} target="_blank">
+            <a
+              href={props.pad && props.pad.wiki_url}
+              target="_blank"
+              rel="noreferrer"
+            >
               READ MORE
             </a>
           </button>

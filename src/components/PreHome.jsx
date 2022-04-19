@@ -1,10 +1,10 @@
 import React from "react";
-import Button from "./Button";
 import { useNavigate } from "react-router-dom";
 import { Phrase, Char } from "animatedtxt";
+import Button from "./Button";
 
 const Prehome = () => {
-  let navigate = useNavigate();
+  const navigate = useNavigate();
   const freelancer = () => {
     navigate("/freelance");
   };
@@ -53,7 +53,7 @@ const Prehome = () => {
                   recruiter();
                 }}
               >
-                <Button text="Recruiter"></Button>
+                <Button text="Recruiter" />
               </div>
             </div>
           </div>

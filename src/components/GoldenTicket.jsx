@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
+import { useNavigate } from "react-router";
 import Button from "./Button";
 import Countdown from "./Countdown.jsx";
-import { useNavigate } from "react-router";
 import NavBar from "./NavBar";
 
 const GoldenTicket = () => {
@@ -11,7 +11,7 @@ const GoldenTicket = () => {
     return result;
   };
 
-  let navigate = useNavigate();
+  const navigate = useNavigate();
   const loose = () => {
     navigate("/goldenticket/loose");
   };
