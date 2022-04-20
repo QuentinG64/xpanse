@@ -4,12 +4,12 @@ const Checkbox = (props) => {
   return (
     <div>
       <input
-        id={props.id}
-        type="checkbox"
-        checked={props.checked}
+        type="radio"
+        value={props.value}
+        name="status"
         className="form-checkbox h-4 w-4 accent-secondary-1"
       />
-      <label htmlFor={props.id}>{props.title}</label>
+      {props.title} <br />
     </div>
   );
 };

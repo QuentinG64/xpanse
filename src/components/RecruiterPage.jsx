@@ -9,7 +9,7 @@ const RecruiterPage = () => {
 
   const getAstro = () => {
     axios
-      .get(`https://ll.thespacedevs.com/2.2.0/astronaut/`)
+      .get(`https://ll.thespacedevs.com/2.2.0/astronaut/?limit=8`)
       .then((res) => res.data.results)
       .then((data) => {
         setAstros(data);
@@ -29,7 +29,6 @@ const RecruiterPage = () => {
           <FilterRecruiter />
         </div>
         <div className="flex justify-center items-center ">
-          {/* <button className="text-white z-50" onClick={() => { getAstro() }}>get</button> */}
           <div className="flex flex-wrap bg-transparent pt-24 justify-end items-center gap-5 w-4/6">
             {astros.map((astro, index) => (
               <CardRecruiter key={index} {...astro} />

@@ -24,15 +24,19 @@ const FilterRecruiter = () => {
         </h2>
       </div>
       <div className="text-main-2 font-primary text-sm py-1">
-        <Checkbox id="1" title=" Active" />
-        <Checkbox id="2" title=" Retired" />
-        <Checkbox id="3" title=" In-training" />
-        <Checkbox id="4" title=" Lost In Flight" />
-        <Checkbox id="5" title=" Lost In Training" />
-        <Checkbox id="6" title=" Died While In Active Service" />
-        <Checkbox id="7" title=" Dismissed" />
-        <Checkbox id="8" title=" Resigned during Training" />
-        <Checkbox id="9" title=" Deceased" />
+        <Checkbox value="1" title=" Active" type="radio" />
+        <Checkbox value="2" title=" Retired" type="radio" />
+        <Checkbox value="3" title=" In-training" type="radio" />
+        <Checkbox value="4" title=" Lost In Flight" type="radio" />
+        <Checkbox value="5" title=" Lost In Training" type="radio" />
+        <Checkbox
+          value="6"
+          title=" Died While In Active Service"
+          type="radio"
+        />
+        <Checkbox value="7" title=" Dismissed" type="radio" />
+        <Checkbox value="8" title=" Resigned during Training" type="radio" />
+        <Checkbox value="9" title=" Deceased" type="radio" />
 
         <div className="mt-7">
           <h2 className="font-title text-main-2 text-sm py-1">
