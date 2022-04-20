@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Checkbox from "./Checkbox";
-import RadioBox from "./RadioBox";
 import SelectBoxFreelance from "./SelectBoxFreelance";
 import ModalDate from "./ModalDate";
+import SelectBoxRocket from "./SelectBoxRocket";
 
 const FilterFreelance = () => {
   // const [checkedOne, setCheckedOne] = useState(false);
@@ -16,7 +16,7 @@ const FilterFreelance = () => {
   // };
 
   return (
-    <div className="border-2 rounded-xl h-auto w-[22%] mb-12 px-4 py-2 fixed overflow-scroll">
+    <div className="border-2 rounded-xl h-auto w-[25%] mb-12 px-4 py-2 fixed overflow-scroll">
       <h1 className="font-title text-main-2 text-lg">
         SELECT YOUR NEXT MISSION
       </h1>
@@ -34,6 +34,12 @@ const FilterFreelance = () => {
             FILTER BY AGENCY
           </h2>
           <SelectBoxFreelance />
+        </div>
+        <div className="mt-7">
+          <h2 className="font-title text-main-2 text-sm py-1">
+            FILTER BY ROCKET
+          </h2>
+          <SelectBoxRocket />
         </div>
         <div className="mt-7">
           <h2 className="font-title text-main-2 text-sm py-1">
