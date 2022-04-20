@@ -23,7 +23,7 @@ const BlockTxt = () => {
             montes, nascetur ridiculus mus.
             <br />
           </h4>
-          <div className="flex flex-row mt-4">
+          <div className="flex flex-row mt-4 items-center">
             <img
               src="../assets/images/arrowAboutUs.png"
               alt="arrow"
@@ -51,11 +51,11 @@ const BlockTxt = () => {
             montes, nascetur ridiculus mus.
             <br />
           </h4>
-          <div className="flex flex-row mt-4">
+          <div className="flex flex-row mt-4 items-center">
             <img
               src="../assets/images/arrowAboutUs.png"
               alt="arrow"
-              width="100"
+              width="120"
             />
             <h5 className="text-primary-1 ml-4"> Learn More </h5>
           </div>
