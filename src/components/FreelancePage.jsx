@@ -1,11 +1,9 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import CardFreelance from "./CardFreelance";
 import FilterFreelance from "./FilterFreelance";
 import NavBar from "./NavBar";
 // import dataMission from "../data/dataMission";
-import axios from 'axios';
-import { useState, useEffect } from "react";
-
 
 const FreelancePage = () => {
   const [missions, setMissions] = useState([]);
@@ -14,14 +12,14 @@ const FreelancePage = () => {
     axios
       .get(`https://ll.thespacedevs.com/2.2.0/launch/`)
       .then((res) => res.data.results)
-      .then((data)=>{
+      .then((data) => {
         setMissions(data);
       })
-          .catch((err) => console.log(err));
-    };
-   useEffect(() => {
+      .catch((err) => console.log(err));
+  };
+  useEffect(() => {
     getMissions();
-   }, []);
+  }, []);
   return (
     <div className="h-screen w-screen">
       <NavBar />
@@ -29,7 +27,7 @@ const FreelancePage = () => {
         <div className="absolute mt-32">
           <FilterFreelance />
         </div>
-         {/* {<button className="text-white z-50" onClick={() => { getMission() }}>get</button> } */}
+        {/* {<button className="text-white z-50" onClick={() => { getMission() }}>get</button> } */}
         <div className="flex justify-center items-center ml-[30%] mr-[1%]">
           <div className="flex flex-wrap bg-transparent pt-24 pb-12 items-center gap-5">
             {missions.map((mission, index) => (
