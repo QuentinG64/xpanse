@@ -1,7 +1,17 @@
 import React, { useState } from "react";
 import Tilt from "react-parallax-tilt";
 
-const CardRecruiter = (profile_image_thumbnail,name,nationality,date_of_birth,agency,status,twitter,instagram,wiki) => {
+const CardRecruiter = (
+  profile_image_thumbnail,
+  name,
+  nationality,
+  date_of_birth,
+  agency,
+  status,
+  twitter,
+  instagram,
+  wiki
+) => {
   const [isFavorite, setIsFavorite] = useState(false);
 
   const heartClickFavorite = () => {
@@ -16,7 +26,9 @@ const CardRecruiter = (profile_image_thumbnail,name,nationality,date_of_birth,ag
             <h2 className="text-main-2 font-title text-center text-sm mt-3 text-transparent bg-clip-text bg-gradient-to-r from-white to-orange-500/90">
               {name}
             </h2>
-            <img
+            <input
+              type="image"
+              onKeyDown={heartClickFavorite}
               onClick={heartClickFavorite}
               src={
                 isFavorite
@@ -71,7 +83,10 @@ const CardRecruiter = (profile_image_thumbnail,name,nationality,date_of_birth,ag
             </div>
           </div>
 
-          <button className="cursor-pointer text-xs mb-3 rounded-2xl px-4 py-1 bg-white bg-opacity-50 hover:bg-white hover:bg-opacity-80 ">
+          <button
+            type="button"
+            className="cursor-pointer text-xs mb-3 rounded-2xl px-4 py-1 bg-white bg-opacity-50 hover:bg-white hover:bg-opacity-80 "
+          >
             <a href={wiki} target="_blank" rel="noreferrer">
               READ MORE
             </a>

@@ -1,15 +1,15 @@
 import React from "react";
 
-const Checkbox = (props) => {
+const Checkbox = (id, title, checked) => {
   return (
     <div>
       <input
-        id={props.id}
+        id={id}
         type="checkbox"
-        checked={props.checked}
+        checked={checked}
         className="form-checkbox h-4 w-4 accent-secondary-1"
       />
-      <label htmlFor={props.id}>{props.title}</label>
+      <label htmlFor={id}>{title}</label>
     </div>
   );
 };

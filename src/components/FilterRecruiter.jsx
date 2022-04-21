@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import Checkbox from "./Checkbox";
 import RadioBox from "./RadioBox";
 import SelectBox from "./SelectBox";
@@ -20,7 +19,7 @@ const FilterRecruiter = () => {
       </h1>
       <div className="mt-7">
         <h2 className="font-title text-main-2 text-sm">
-          FILTER BY PARTNERS'S STATUS
+          FILTER BY PARTNERS STATUS
         </h2>
       </div>
       <div className="text-main-2 font-primary text-sm py-1">
