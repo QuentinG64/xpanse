@@ -1,18 +1,19 @@
-import React, { useState } from "react";
+import PropTypes from "prop-types";
 import Checkbox from "./Checkbox";
-import RadioBox from "./RadioBox";
-import SelectBox from "./SelectBox";
 
-const FilterRecruiter = () => {
-  // const [checkedOne, setCheckedOne] = useState(false);
-  // const handleChangeOne = () => {
-  //   setCheckedOne(!checkedOne);
-  // };
+const titles = [
+  "Active",
+  "Retired",
+  "In-Training",
+  "Lost In Flight",
+  "Lost In Training",
+  "Died While In Active Service",
+  "Dismissed",
+  "Resigned during Training",
+  "Deceased",
+];
 
-  // const [checkedTwo, setCheckedTwo] = useState(false);
-  // const handleChangeTwo = () => {
-  //   setCheckedTwo(!checkedTwo);
-  // };
+const FilterRecruiter = ({ status, setStatus }) => {
   return (
     <div className="border-2 rounded-xl h-auto px-4 py-2 fixed">
       <h1 className="font-title text-main-2 text-lg">
@@ -20,35 +21,28 @@ const FilterRecruiter = () => {
       </h1>
       <div className="mt-7">
         <h2 className="font-title text-main-2 text-sm">
-          FILTER BY PARTNERS'S STATUS
+          FILTER BY PARTNERS STATUS
         </h2>
       </div>
       <div className="text-main-2 font-primary text-sm py-1">
-        <Checkbox id="1" title=" Active" />
-        <Checkbox id="2" title=" Retired" />
-        <Checkbox id="3" title=" In-training" />
-        <Checkbox id="4" title=" Lost In Flight" />
-        <Checkbox id="5" title=" Lost In Training" />
-        <Checkbox id="6" title=" Died While In Active Service" />
-        <Checkbox id="7" title=" Dismissed" />
-        <Checkbox id="8" title=" Resigned during Training" />
-        <Checkbox id="9" title=" Deceased" />
-
-        <div className="mt-7">
-          <h2 className="font-title text-main-2 text-sm py-1">
-            FILTER BY TYPE OF AGENCY
-          </h2>
-          <SelectBox />
-        </div>
-        <div className="mt-7">
-          <h2 className="font-title text-main-2 text-sm py-1">
-            FILTER BY SOCIAL NETWORK
-          </h2>
-          <RadioBox />
-        </div>
+        {titles.map((title, index) => (
+          <Checkbox
+            key={index}
+            value={index + 1}
+            status={status}
+            title={title}
+            type="radio"
+            setStatus={setStatus}
+          />
+        ))}
       </div>
     </div>
   );
+};
+
+FilterRecruiter.propTypes = {
+  status: PropTypes.number.isRequired,
+  setStatus: PropTypes.func.isRequired,
 };
 
 export default FilterRecruiter;

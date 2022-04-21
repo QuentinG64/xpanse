@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import Button from "./Button";
 import { useNavigate } from "react-router";
+import Button from "./Button";
 import NavBar from "./NavBar";
 import LoaderGoldenTicket from "./LoaderGoldenTicket";
 
 const TicketLoose = () => {
-  let navigate = useNavigate();
+  const navigate = useNavigate();
   const tryAgain = () => {
     navigate("/goldenticket");
   };
@@ -30,7 +30,12 @@ const TicketLoose = () => {
           <span className="text-7xl text-primary-1">TRY AGAIN!</span>
         </h1>
         <div
+          role="button"
           className="pl-7 z-10 pt-5"
+          tabIndex={0}
+          onKeyDown={() => {
+            tryAgain();
+          }}
           onClick={() => {
             tryAgain();
           }}

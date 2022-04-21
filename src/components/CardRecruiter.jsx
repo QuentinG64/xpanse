@@ -1,7 +1,18 @@
 import React, { useState } from "react";
 import Tilt from "react-parallax-tilt";
+import PropTypes from "prop-types";
 
-const CardRecruiter = (props) => {
+const CardRecruiter = ({
+  profile_image_thumbnail: profileImage,
+  name,
+  nationality,
+  date_of_birth: dateOfBirth,
+  agency,
+  status,
+  twitter,
+  instagram,
+  wiki,
+}) => {
   const [isFavorite, setIsFavorite] = useState(false);
 
   const heartClickFavorite = () => {
@@ -14,9 +25,11 @@ const CardRecruiter = (props) => {
         <div className="h-full w-full flex flex-col justify-around items-center ">
           <div className="flex justify-between items-center w-full px-2">
             <h2 className="text-main-2 font-title text-center text-sm mt-3 text-transparent bg-clip-text bg-gradient-to-r from-white to-orange-500/90">
-              {props.name}
+              {name}
             </h2>
-            <img
+            <input
+              type="image"
+              onKeyDown={heartClickFavorite}
               onClick={heartClickFavorite}
               src={
                 isFavorite
@@ -30,25 +43,26 @@ const CardRecruiter = (props) => {
 
           <div className="h-max w-max overflow-hidden mt-2 rounded-lg ">
             <img
-              src={props.profile_image_thumbnail}
-              alt={props.name}
+              src={profileImage}
+              alt={name}
               className="object-cover opacity-80"
             />
           </div>
 
           <div className="relative font-primary text-left w-full pl-4 pr-4 pb-2">
-            <p className="dataCard">Nationality: {props.nationality}</p>
-            <p className="dataCard">Date of birth: {props.date_of_birth}</p>
-            <p className="dataCard">Agency: {props.agency.country_code}</p>
-            <p className="dataCard">Status: {props.status.name}</p>
+            <p className="dataCard">Nationality: {nationality}</p>
+            <p className="dataCard">Date of birth: {dateOfBirth}</p>
+            <p className="dataCard">Agency: {agency.country_code}</p>
+            <p className="dataCard">Status: {status.name}</p>
             {/* TWITTER & INSTAGRAM PROPS */}
             <div className="flex flex-row justify-evenly gap-5 align-center">
               <p className="font-second">
-                {props.twitter ? (
+                {twitter ? (
                   <a
                     className="text-blue-400 text-xs pb-10"
-                    href={props.twitter}
+                    href={twitter}
                     target="_blank"
+                    rel="noreferrer"
                   >
                     Twitter
                   </a>
@@ -56,11 +70,12 @@ const CardRecruiter = (props) => {
               </p>
 
               <p className="font-second">
-                {props.instagram ? (
+                {instagram ? (
                   <a
                     className="text-pink-400 text-xs"
-                    href={props.instagram}
+                    href={instagram}
                     target="_blank"
+                    rel="noreferrer"
                   >
                     Instagram
                   </a>
@@ -69,8 +84,11 @@ const CardRecruiter = (props) => {
             </div>
           </div>
 
-          <button className="cursor-pointer text-xs mb-3 rounded-2xl px-4 py-1 bg-white bg-opacity-50 hover:bg-white hover:bg-opacity-80 ">
-            <a href={props.wiki} target="_blank">
+          <button
+            type="button"
+            className="cursor-pointer text-xs mb-3 rounded-2xl px-4 py-1 bg-white bg-opacity-50 hover:bg-white hover:bg-opacity-80 "
+          >
+            <a href={wiki} target="_blank" rel="noreferrer">
               READ MORE
             </a>
           </button>
@@ -78,6 +96,18 @@ const CardRecruiter = (props) => {
       </div>
     </Tilt>
   );
+};
+
+CardRecruiter.propTypes = {
+  name: PropTypes.string.isRequired,
+  profile_image_thumbnail: PropTypes.string.isRequired,
+  nationality: PropTypes.string.isRequired,
+  date_of_birth: PropTypes.string.isRequired,
+  agency: PropTypes.shape({ country_code: PropTypes.string }).isRequired,
+  status: PropTypes.shape({ name: PropTypes.string }).isRequired,
+  twitter: PropTypes.string.isRequired,
+  instagram: PropTypes.string.isRequired,
+  wiki: PropTypes.string.isRequired,
 };
 
 //

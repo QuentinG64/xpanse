@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import Checkbox from "./Checkbox";
-import RadioBox from "./RadioBox";
-import SelectBox from "./SelectBox";
+import SelectBoxFreelance from "./SelectBoxFreelance";
+import ModalDate from "./ModalDate";
+import SelectBoxRocket from "./SelectBoxRocket";
 
 const FilterFreelance = () => {
   // const [checkedOne, setCheckedOne] = useState(false);
@@ -13,38 +14,38 @@ const FilterFreelance = () => {
   // const handleChangeTwo = () => {
   //   setCheckedTwo(!checkedTwo);
   // };
+
   return (
-    <div className="border-2 rounded-xl h-auto px-4 py-2 fixed">
+    <div className="border-2 rounded-xl h-auto w-[25%] mb-12 px-4 py-2 fixed overflow-scroll">
       <h1 className="font-title text-main-2 text-lg">
-        SELECT YOUR NEXT PARTNER
+        SELECT YOUR NEXT MISSION
       </h1>
       <div className="mt-7">
-        <h2 className="font-title text-main-2 text-sm">
-          FILTER BY PARTNERS'S STATUS
-        </h2>
+        <h2 className="font-title text-main-2 text-sm">FILTER BY LOCATION</h2>
       </div>
       <div className="text-main-2 font-primary text-sm py-1">
-        <Checkbox id="1" title=" Active" />
-        <Checkbox id="2" title=" Retired" />
-        <Checkbox id="3" title=" In-training" />
-        <Checkbox id="4" title=" Lost In Flight" />
-        <Checkbox id="5" title=" Lost In Training" />
-        <Checkbox id="6" title=" Died While In Active Service" />
-        <Checkbox id="7" title=" Dismissed" />
-        <Checkbox id="8" title=" Resigned during Training" />
-        <Checkbox id="9" title=" Deceased" />
+        <Checkbox id="1" title=" USA" />
+        <Checkbox id="2" title=" France" />
+        <Checkbox id="3" title=" Kazakhstan" />
+        <Checkbox id="4" title=" Russia" />
 
         <div className="mt-7">
           <h2 className="font-title text-main-2 text-sm py-1">
-            FILTER BY TYPE OF AGENCY
+            FILTER BY AGENCY
           </h2>
-          <SelectBox />
+          <SelectBoxFreelance />
         </div>
         <div className="mt-7">
           <h2 className="font-title text-main-2 text-sm py-1">
-            FILTER BY SOCIAL NETWORK
+            FILTER BY ROCKET
           </h2>
-          <RadioBox />
+          <SelectBoxRocket />
+        </div>
+        <div className="mt-7">
+          <h2 className="font-title text-main-2 text-sm py-1">
+            FILTER BY DATE
+          </h2>
+          <ModalDate />
         </div>
       </div>
     </div>

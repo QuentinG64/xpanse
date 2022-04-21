@@ -2,10 +2,28 @@ import React from "react";
 
 const RadioBox = () => {
   return (
-    <div className>
-      <input type="radio" value="All" name="social" /> All <br />
-      <input type="radio" value="Twitter" name="social" /> Twittter <br />
-      <input type="radio" value="Instagram" name="social" /> Instagram
+    <div>
+      <input
+        type="radio"
+        value="All"
+        name="social"
+        className="form-checkbox h-4 w-4 accent-secondary-1"
+      />
+      All <br />
+      <input
+        type="radio"
+        value="Twitter"
+        name="social"
+        className="form-checkbox h-4 w-4 accent-secondary-1"
+      />
+      Twittter <br />
+      <input
+        type="radio"
+        value="Instagram"
+        name="social"
+        className="form-checkbox h-4 w-4 accent-secondary-1"
+      />
+      Instagram
     </div>
   );
 };

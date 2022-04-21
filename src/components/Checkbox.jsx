@@ -1,17 +1,28 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-const Checkbox = (props) => {
+const Checkbox = ({ value, title, status, setStatus }) => {
   return (
     <div>
       <input
-        id={props.id}
-        type="checkbox"
-        checked={props.checked}
+        type="radio"
+        name="status"
         className="form-checkbox h-4 w-4 accent-secondary-1"
+        checked={status === value}
+        onChange={() => {
+          setStatus(value);
+        }}
       />
-      <label htmlFor={props.id}>{props.title}</label>
+      {title} <br />
     </div>
   );
+};
+
+Checkbox.propTypes = {
+  value: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  status: PropTypes.number.isRequired,
+  setStatus: PropTypes.func.isRequired,
 };
 
 export default Checkbox;
