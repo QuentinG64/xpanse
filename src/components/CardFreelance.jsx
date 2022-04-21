@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Tilt from "react-parallax-tilt";
 
-const CardFreelance = (props) => {
+const CardFreelance = (launch_service_provider,name,window_start,rocket,pad, mission) => {
   const [isFavorite, setIsFavorite] = useState(false);
 
   const heartClickFavorite = () => {
@@ -24,7 +24,7 @@ const CardFreelance = (props) => {
               className="cursor-pointer h-4 w-4 absolute top-2 right-3"
             />
             <h1 className="text-main-2 font-title text-sm h-14 mt-3 mr-[10%] text-transparent bg-clip-text bg-gradient-to-r from-slate-200 to-slate-300">
-              {props.launch_service_provider.name}
+              {launch_service_provider.name}
             </h1>
           </div>
 
@@ -38,11 +38,11 @@ const CardFreelance = (props) => {
 
           <div className="relative font-primary text-left w-full pl-4 pr-4 mb-7 overflow-scroll">
             <h2 className="text-main-2 font-primary h-10 text-sm mt-3 text-transparent bg-clip-text bg-gradient-to-r from-slate-200 to-slate-300">
-              {props.name}
+              {name}
             </h2>
             <p className="dataCard">
               {" "}
-              ⏱ {props.window_start
+              ⏱ {window_start
                 .slice(0, 10)
                 .split("-")
                 .reverse()
@@ -51,14 +51,14 @@ const CardFreelance = (props) => {
             <p className="dataCard">
               🚀{" "}
               <span className="font-second">
-                {props.rocket.configuration.name}
+                {rocket.configuration.name}
               </span>
             </p>
-            <p className="dataCard">📍 {props.pad.location.name} </p>
+            <p className="dataCard">📍 {pad.location.name} </p>
             <p className="dataCard overflow-hidden pb-10">
               📋{" "}
-              {props.mission
-                ? props.mission.description
+              {mission
+                ? mission.description
                 : " For more information, contact us"}{" "}
             </p>
             {/* TWITTER & INSTAGRAM PROPS */}
@@ -91,7 +91,7 @@ const CardFreelance = (props) => {
 
           <button className="cursor-pointer text-xs mb-3 rounded-2xl px-4 py-1 bg-white bg-opacity-50 hover:bg-white hover:bg-opacity-80 ">
             <a
-              href={props.pad && props.pad.wiki_url}
+              href={pad &&pad.wiki_url}
               target="_blank"
               rel="noreferrer"
             >

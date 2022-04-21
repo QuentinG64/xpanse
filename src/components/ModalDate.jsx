@@ -40,7 +40,7 @@ const Modaldate = () => {
           startDate={state.startDate} // Date or null
           endDate={state.endDate} // Date or null
           focusedInput={null} // START_DATE, END_DATE or null
-          vertical={true}
+          vertical
         />
       </button>
       <Modal open={open} onClose={onCloseModal} closeIcon={closeIcon} center>

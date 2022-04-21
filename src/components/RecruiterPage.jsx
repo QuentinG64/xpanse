@@ -29,7 +29,6 @@ const RecruiterPage = () => {
           <FilterRecruiter />
         </div>
         <div className="flex justify-center items-center ">
-         
           <div className="flex flex-wrap bg-transparent pt-24 justify-end items-center gap-5 w-4/6">
             {astros.map((astro, index) => (
               <CardRecruiter key={index} {...astro} />
