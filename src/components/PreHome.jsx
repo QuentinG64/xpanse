@@ -37,6 +37,11 @@ const Prehome = () => {
             <div className=" mt-48 ml-96 pl-32">
               <h3 className="text-main-2 "> I am a</h3>
               <div
+                onKeyDown={() => {
+                  freelancer();
+                }}
+                tabIndex={0}
+                role="button"
                 onClick={() => {
                   freelancer();
                 }}
@@ -49,9 +54,14 @@ const Prehome = () => {
             <div className="mt-48 ml-10 pl-20 ">
               <h3 className="text-main-2 "> I am more a</h3>
               <div
+                onKeyDown={() => {
+                  recruiter();
+                }}
+                role="button"
                 onClick={() => {
                   recruiter();
                 }}
+                tabIndex={0}
               >
                 <Button text="Recruiter" />
               </div>

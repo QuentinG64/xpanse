@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import { useNavigate } from "react-router";
 import Button from "./Button";
 import Countdown from "./Countdown.jsx";
@@ -6,11 +5,6 @@ import NavBar from "./NavBar";
 
 const GoldenTicket = () => {
   // fonction retournant la variable message indiquant si c'est win ou loose
-  const forTheWin = () => {
-    const result = Math.random();
-    return result;
-  };
-
   const navigate = useNavigate();
   const loose = () => {
     navigate("/goldenticket/loose");
@@ -18,6 +12,13 @@ const GoldenTicket = () => {
 
   const win = () => {
     navigate("/goldenticket/win");
+  };
+  const forTheWin = () => {
+    const probability = Math.random();
+    if (probability >= 0.2) {
+      return loose();
+    }
+    return win();
   };
 
   return (
@@ -34,11 +35,12 @@ const GoldenTicket = () => {
       {/* Il faut qu'au click sur le component Button, en 
       fonction du résultat forTheWin, cela m'affiche la page loose ou win */}
       <div
+        role="button"
+        tabIndex={0}
         className="mt-10 pl-7"
+        onKeyDown={forTheWin}
         // ici modifier la valeur dans le ternaire de result pour définir la probabilité de gain
-        onClick={() => {
-          forTheWin() >= 0.2 ? loose() : win();
-        }}
+        onClick={forTheWin}
       >
         <Button text="HOW IS YOUR LUCK?" />
       </div>

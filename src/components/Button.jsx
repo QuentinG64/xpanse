@@ -1,4 +1,4 @@
-// eslint-disable-next-line react/prop-types
+import PropTypes from "prop-types";
 
 const Button = ({ text }) => {
   return (
@@ -6,6 +6,10 @@ const Button = ({ text }) => {
       <h3 className="font-main-2">{text}</h3>
     </div>
   );
+};
+
+Button.propTypes = {
+  text: PropTypes.string.isRequired,
 };
 
 export default Button;
