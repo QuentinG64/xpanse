@@ -14,8 +14,11 @@ const GoldenTicket = () => {
     navigate("/goldenticket/win");
   };
   const forTheWin = () => {
-    const result = Math.random();
-    result >= 0.2 ? loose() : win();
+    const probability = Math.random();
+    if (probability >= 0.2) {
+      return loose();
+    }
+    return win();
   };
 
   return (

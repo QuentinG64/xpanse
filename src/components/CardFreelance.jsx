@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import Tilt from "react-parallax-tilt";
+import PropTypes from "prop-types";
 
-const CardFreelance = ({
+const CardFreelance = (
   name,
   launch_service_provider,
   window_start,
   rocket,
   pad,
-  mission,
-}) => {
+  mission
+) => {
   const [isFavorite, setIsFavorite] = useState(false);
 
   const heartClickFavorite = () => {
@@ -103,6 +104,15 @@ const CardFreelance = ({
       </div>
     </Tilt>
   );
+};
+
+CardFreelance.prototype = {
+  name: PropTypes.string.isRequired,
+  launch_service_provider: PropTypes.object.isRequired,
+  window_start: PropTypes.string.isRequired,
+  rocket: PropTypes.object.isRequired,
+  pad: PropTypes.object.isRequired,
+  mission: PropTypes.object.isRequired,
 };
 
 //
