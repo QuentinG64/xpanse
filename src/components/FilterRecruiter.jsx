@@ -1,7 +1,5 @@
-import React, { useState } from "react";
+import PropTypes from "prop-types";
 import Checkbox from "./Checkbox";
-import RadioBox from "./RadioBox";
-import SelectBox from "./SelectBox";
 
 const titles = [
   "Active",
@@ -23,7 +21,7 @@ const FilterRecruiter = ({ status, setStatus }) => {
       </h1>
       <div className="mt-7">
         <h2 className="font-title text-main-2 text-sm">
-          FILTER BY PARTNERS'S STATUS
+          FILTER BY PARTNERS STATUS
         </h2>
       </div>
       <div className="text-main-2 font-primary text-sm py-1">
@@ -40,6 +38,11 @@ const FilterRecruiter = ({ status, setStatus }) => {
       </div>
     </div>
   );
+};
+
+FilterRecruiter.propTypes = {
+  status: PropTypes.number.isRequired,
+  setStatus: PropTypes.func.isRequired,
 };
 
 export default FilterRecruiter;
