@@ -3,16 +3,19 @@ import Checkbox from "./Checkbox";
 import RadioBox from "./RadioBox";
 import SelectBox from "./SelectBox";
 
-const FilterRecruiter = () => {
-  // const [checkedOne, setCheckedOne] = useState(false);
-  // const handleChangeOne = () => {
-  //   setCheckedOne(!checkedOne);
-  // };
+const titles = [
+  "Active",
+  "Retired",
+  "In-Training",
+  "Lost In Flight",
+  "Lost In Training",
+  "Died While In Active Service",
+  "Dismissed",
+  "Resigned during Training",
+  "Deceased",
+];
 
-  // const [checkedTwo, setCheckedTwo] = useState(false);
-  // const handleChangeTwo = () => {
-  //   setCheckedTwo(!checkedTwo);
-  // };
+const FilterRecruiter = ({ status, setStatus }) => {
   return (
     <div className="border-2 rounded-xl h-auto px-4 py-2 fixed">
       <h1 className="font-title text-main-2 text-lg">
@@ -24,32 +27,16 @@ const FilterRecruiter = () => {
         </h2>
       </div>
       <div className="text-main-2 font-primary text-sm py-1">
-        <Checkbox value="1" title=" Active" type="radio" />
-        <Checkbox value="2" title=" Retired" type="radio" />
-        <Checkbox value="3" title=" In-training" type="radio" />
-        <Checkbox value="4" title=" Lost In Flight" type="radio" />
-        <Checkbox value="5" title=" Lost In Training" type="radio" />
-        <Checkbox
-          value="6"
-          title=" Died While In Active Service"
-          type="radio"
-        />
-        <Checkbox value="7" title=" Dismissed" type="radio" />
-        <Checkbox value="8" title=" Resigned during Training" type="radio" />
-        <Checkbox value="9" title=" Deceased" type="radio" />
-
-        <div className="mt-7">
-          <h2 className="font-title text-main-2 text-sm py-1">
-            FILTER BY TYPE OF AGENCY
-          </h2>
-          <SelectBox />
-        </div>
-        <div className="mt-7">
-          <h2 className="font-title text-main-2 text-sm py-1">
-            FILTER BY SOCIAL NETWORK
-          </h2>
-          <RadioBox />
-        </div>
+        {titles.map((title, index) => (
+          <Checkbox
+            key={index}
+            value={index + 1}
+            status={status}
+            title={title}
+            type="radio"
+            setStatus={setStatus}
+          />
+        ))}
       </div>
     </div>
   );

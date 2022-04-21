@@ -8,7 +8,7 @@ const FreelancePage = () => {
   return (
     <div className="h-screen w-screen">
       <NavBar />
-      <div className="flex flex-col bg-fixed bg-cover bg-[url('../assets/images/FreelanceBackground.png')]">
+      <div className="flex flex-col bg-fixed bg-cover bg-[url('../assets/images/FreelanceBackground.png')] h-full w-full">
         <div className="absolute mt-32">
           <FilterFreelance />
         </div>
