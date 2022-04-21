@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Tilt from "react-parallax-tilt";
 
-const CardRecruiter = (
+const CardRecruiter = ({
   profile_image_thumbnail,
   name,
   nationality,
@@ -10,8 +10,8 @@ const CardRecruiter = (
   status,
   twitter,
   instagram,
-  wiki
-) => {
+  wiki,
+}) => {
   const [isFavorite, setIsFavorite] = useState(false);
 
   const heartClickFavorite = () => {

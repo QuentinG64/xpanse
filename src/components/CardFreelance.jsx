@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import Tilt from "react-parallax-tilt";
 import PropTypes from "prop-types";
 
-const CardFreelance = (
+const CardFreelance = ({
   name,
   launch_service_provider,
   window_start,
   rocket,
   pad,
-  mission
-) => {
+  mission,
+}) => {
   const [isFavorite, setIsFavorite] = useState(false);
 
   const heartClickFavorite = () => {
