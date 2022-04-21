@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import Tilt from "react-parallax-tilt";
+import PropTypes from "prop-types";
 
 const CardRecruiter = ({
-  profile_image_thumbnail,
+  profile_image_thumbnail: profileImage,
   name,
   nationality,
-  date_of_birth,
+  date_of_birth: dateOfBirth,
   agency,
   status,
   twitter,
@@ -42,7 +43,7 @@ const CardRecruiter = ({
 
           <div className="h-max w-max overflow-hidden mt-2 rounded-lg ">
             <img
-              src={profile_image_thumbnail}
+              src={profileImage}
               alt={name}
               className="object-cover opacity-80"
             />
@@ -50,7 +51,7 @@ const CardRecruiter = ({
 
           <div className="relative font-primary text-left w-full pl-4 pr-4 pb-2">
             <p className="dataCard">Nationality: {nationality}</p>
-            <p className="dataCard">Date of birth: {date_of_birth}</p>
+            <p className="dataCard">Date of birth: {dateOfBirth}</p>
             <p className="dataCard">Agency: {agency.country_code}</p>
             <p className="dataCard">Status: {status.name}</p>
             {/* TWITTER & INSTAGRAM PROPS */}
@@ -95,6 +96,18 @@ const CardRecruiter = ({
       </div>
     </Tilt>
   );
+};
+
+CardRecruiter.propTypes = {
+  name: PropTypes.string.isRequired,
+  profile_image_thumbnail: PropTypes.string.isRequired,
+  nationality: PropTypes.string.isRequired,
+  date_of_birth: PropTypes.string.isRequired,
+  agency: PropTypes.shape({ country_code: PropTypes.string }).isRequired,
+  status: PropTypes.shape({ name: PropTypes.string }).isRequired,
+  twitter: PropTypes.string.isRequired,
+  instagram: PropTypes.string.isRequired,
+  wiki: PropTypes.string.isRequired,
 };
 
 //

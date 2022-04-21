@@ -3,9 +3,9 @@ import Tilt from "react-parallax-tilt";
 import PropTypes from "prop-types";
 
 const CardFreelance = ({
-  name,
-  launch_service_provider,
-  window_start,
+  name: missionName,
+  launch_service_provider: launchServiceProvider,
+  window_start: windowStart,
   rocket,
   pad,
   mission,
@@ -34,7 +34,7 @@ const CardFreelance = ({
               className="cursor-pointer h-4 w-4 absolute top-2 right-3"
             />
             <h1 className="text-main-2 font-title text-sm h-14 mt-3 mr-[10%] text-transparent bg-clip-text bg-gradient-to-r from-slate-200 to-slate-300">
-              {launch_service_provider.name}
+              {launchServiceProvider.name}
             </h1>
           </div>
 
@@ -48,9 +48,9 @@ const CardFreelance = ({
 
           <div className="relative font-primary text-left w-full pl-4 pr-4 mb-7 overflow-scroll">
             <h2 className="text-main-2 font-primary h-10 text-sm mt-3 text-transparent bg-clip-text bg-gradient-to-r from-slate-200 to-slate-300">
-              {name}
+              {missionName}
             </h2>
-            <p className="dataCard"> ⏱ {window_start} </p>
+            <p className="dataCard"> ⏱ {windowStart} </p>
             <p className="dataCard">
               🚀{" "}
               <span className="font-second">
@@ -106,13 +106,21 @@ const CardFreelance = ({
   );
 };
 
-CardFreelance.prototype = {
+CardFreelance.propTypes = {
   name: PropTypes.string.isRequired,
-  launch_service_provider: PropTypes.object.isRequired,
+  launch_service_provider: PropTypes.shape({ name: PropTypes.string })
+    .isRequired,
   window_start: PropTypes.string.isRequired,
-  rocket: PropTypes.object.isRequired,
-  pad: PropTypes.object.isRequired,
-  mission: PropTypes.object.isRequired,
+  rocket: PropTypes.shape({
+    configuration: PropTypes.shape({ name: PropTypes.string }),
+  }).isRequired,
+  pad: PropTypes.shape({
+    location: PropTypes.shape({ name: PropTypes.string }),
+    wiki_url: PropTypes.string,
+  }).isRequired,
+  mission: PropTypes.shape({
+    description: PropTypes.string,
+  }).isRequired,
 };
 
 //
