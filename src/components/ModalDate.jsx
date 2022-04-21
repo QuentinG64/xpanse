@@ -27,17 +27,23 @@ const Modaldate = () => {
 
   const [state, dispatch] = useReducer(reducer, initialState);
 
+  const closeIcon = (
+    <button className="bg-sky-400 h-10 w-40 mt-2 mr-8 z-10 rounded-md text-center flex justify-center items-center text-sm font-title cursor-pointer hover:text-main-1 transition-all duration-450">
+      Validate
+    </button>
+  );
+
   return (
     <div>
       <button onClick={onOpenModal}>
         <DateRangeInput
           startDate={state.startDate} // Date or null
           endDate={state.endDate} // Date or null
-          focusedInput={state.focusedInput} // START_DATE, END_DATE or null
-          vertical={true}
+          focusedInput={null} // START_DATE, END_DATE or null
+          vertical
         />
       </button>
-      <Modal open={open} onClose={onCloseModal} center>
+      <Modal open={open} onClose={onCloseModal} closeIcon={closeIcon} center>
         <p>
           <DateRangeInput
             onDatesChange={(data) =>
