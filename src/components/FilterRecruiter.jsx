@@ -1,6 +1,5 @@
+import PropTypes from "prop-types";
 import Checkbox from "./Checkbox";
-import RadioBox from "./RadioBox";
-import SelectBox from "./SelectBox";
 
 const titles = [
   "Active",
@@ -39,6 +38,11 @@ const FilterRecruiter = ({ status, setStatus }) => {
       </div>
     </div>
   );
+};
+
+FilterRecruiter.propTypes = {
+  status: PropTypes.number.isRequired,
+  setStatus: PropTypes.func.isRequired,
 };
 
 export default FilterRecruiter;
