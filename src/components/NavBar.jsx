@@ -19,13 +19,13 @@ const NavBar = () => {
           </Link>
         </p>
         <ul className="w-4/6 space-x-4 flex justify-around bg-transparent">
-          <li className="pr-20 hover:underline decoration-solid decoration-primary-1">
+          <li className="hover:underline decoration-solid decoration-primary-1">
             <Link to="/freelance">FREELANCE</Link>
           </li>
-          <li className="pr-20 hover:underline decoration-solid decoration-primary-1">
+          <li className="hover:underline decoration-solid decoration-primary-1">
             <Link to="/recruiterpage">RECRUITER</Link>
           </li>
-          <li className="pr-20 hover:underline decoration-solid decoration-primary-1">
+          <li className="hover:underline decoration-solid decoration-primary-1">
             <Link to="/goldenticket">GOLDEN TICKET</Link>
           </li>
           <li className="hover:underline decoration-solid decoration-primary-1">
