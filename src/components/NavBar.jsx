@@ -6,7 +6,7 @@ const NavBar = () => {
   return (
     <div className="fixed w-full z-50">
       <nav className="font-title flex justify-between bg-transparent text-main-2 pt-6">
-        <p className="w-1/6 ">
+        <p className="w-1/6  flex justify-around">
           <Link to="/">
             <Phrase margin={15} size={20} color="white">
               <Char char="X" delay={0} />

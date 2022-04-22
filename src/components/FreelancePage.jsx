@@ -10,7 +10,7 @@ const FreelancePage = () => {
 
   const getMissions = () => {
     axios
-      .get(`https://ll.thespacedevs.com/2.2.0/launch/`)
+      .get(`https://ll.thespacedevs.com/2.2.0/launch/?limit=8`)
       .then((res) => res.data.results)
       .then((data) => {
         setMissions(data);
