@@ -25,7 +25,7 @@ const BlockTxt = () => {
           </h4>
           <div className="flex flex-row mt-4 items-center">
             <img
-              src="../assets/images/arrowAboutUs.png"
+              src="./assets/images/arrowAboutUs.png"
               alt="arrow"
               width="120"
             />
@@ -53,7 +53,7 @@ const BlockTxt = () => {
           </h4>
           <div className="flex flex-row mt-4 items-center">
             <img
-              src="../assets/images/arrowAboutUs.png"
+              src="./assets/images/arrowAboutUs.png"
               alt="arrow"
               width="120"
             />
@@ -79,7 +79,7 @@ const BlockTxt = () => {
           </h4>
           <div className="flex flex-row mt-4 items-center">
             <img
-              src="../assets/images/arrowAboutUs.png"
+              src="./assets/images/arrowAboutUs.png"
               alt="arrow"
               width="120"
             />

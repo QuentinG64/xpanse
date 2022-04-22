@@ -5,7 +5,7 @@ const Infos = () => {
   return (
     <div className=" bg-main-1 text-main-2 flex flex-row">
       <div className="mt-20 mb-20">
-        <img src="../assets/images/astronautAboutUs.png" alt="astronaut" />
+        <img src="./assets/images/astronautAboutUs.png" alt="astronaut" />
       </div>
       <div className="">
         <div className="absolute">

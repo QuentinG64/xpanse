@@ -33,7 +33,7 @@ const Prehome = () => {
           </h3>
         </div>
         <div className="flex justify-between h-5/6">
-          <div className="filter grayscale hover:filter-none w-1/2 bg-cover bg-[url('../assets/images/FreelanceMainPic3.png')]">
+          <div className="filter grayscale hover:filter-none w-1/2 bg-cover bg-[url('./assets/images/FreelanceMainPic3.png')]">
             <div className=" mt-48 ml-96 pl-32">
               <h3 className="text-main-2 "> I am a</h3>
               <div
@@ -50,7 +50,7 @@ const Prehome = () => {
               </div>
             </div>
           </div>
-          <div className="filter grayscale hover:filter-none w-1/2 bg-cover bg-[url('../assets/images/recruiterMainPic.png')]">
+          <div className="filter grayscale hover:filter-none w-1/2 bg-cover bg-[url('./assets/images/recruiterMainPic.png')]">
             <div className="mt-48 ml-10 pl-20 ">
               <h3 className="text-main-2 "> I am more a</h3>
               <div
