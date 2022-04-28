@@ -2,6 +2,22 @@ module.exports = {
   content: ["./src/**/*.{html,jsx}"],
 
   theme: {
+    screens: {
+      "2xl": { max: "1535px" },
+      // => @media (max-width: 1535px) { ... }
+
+      xl: { max: "1279px" },
+      // => @media (max-width: 1279px) { ... }
+
+      lg: { max: "1023px" },
+      // => @media (max-width: 1023px) { ... }
+
+      md: { max: "767px" },
+      // => @media (max-width: 767px) { ... }
+
+      sm: { max: "639px" },
+      // => @media (max-width: 639px) { ... }
+    },
     extend: {
       fontFamily: {
         title: ["Mandatory"],
@@ -22,6 +38,14 @@ module.exports = {
       },
       boxShadow: {
         "5xl": "20px 20px 50px rgba(0, 0, 0, 0.5)",
+      },
+
+      backgroundImage: {
+        freeHome: "url('/assets/images/FreelanceMainPic3.png')",
+        recruitHome: "url('/assets/images/recruiterMainPic.png')",
+        recruitPage: "url('/assets/images/recruiterBackground.png')",
+        freePage: "url('/assets/images/freelanceBackground.png')",
+        goldenTicket: "url('/assets/images/goldenTicketBg.png')",
       },
     },
   },

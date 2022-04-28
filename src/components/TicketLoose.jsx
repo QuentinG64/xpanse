@@ -22,7 +22,7 @@ const TicketLoose = () => {
   ) : (
     <div>
       {/* SECOND PAGE GOLDEN TICKET -- LOOSE */}
-      <div className="h-screen bg-cover bg-[url('../assets/images/goldenTicketBg.png')] text-main-2">
+      <div className="h-screen bg-cover bg-goldenTicket text-main-2">
         <NavBar />
         <h1 className="font-title text-main-2 text-6xl w-9/12 pt-32 pl-7">
           SO <span className="text-8xl text-primary-1">SORRY!</span> <br /> YOU

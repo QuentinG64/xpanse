@@ -27,8 +27,8 @@ const CardFreelance = ({
               onKeyDown={heartClickFavorite}
               src={
                 isFavorite
-                  ? "../assets/images/heartFill.png"
-                  : "../assets/images/heartEmpty.png"
+                  ? "./assets/images/heartFill.png"
+                  : "./assets/images/heartEmpty.png"
               }
               alt="heart"
               className="cursor-pointer h-4 w-4 absolute top-2 right-3"

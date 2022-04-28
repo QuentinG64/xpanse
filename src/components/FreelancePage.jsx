@@ -7,10 +7,11 @@ import NavBar from "./NavBar";
 
 const FreelancePage = () => {
   const [missions, setMissions] = useState([]);
+  const [status, setStatus] = useState("");
 
   const getMissions = () => {
     axios
-      .get(`https://ll.thespacedevs.com/2.2.0/launch/?limit=8`)
+      .get(`https://ll.thespacedevs.com/2.2.0/launch/?limit=8&status=${status}`)
       .then((res) => res.data.results)
       .then((data) => {
         setMissions(data);
@@ -19,13 +20,13 @@ const FreelancePage = () => {
   };
   useEffect(() => {
     getMissions();
-  }, []);
+  }, [status]);
   return (
     <div className="h-screen w-screen">
       <NavBar />
-      <div className="flex flex-col bg-fixed bg-cover bg-[url('../assets/images/FreelanceBackground.png')] h-full w-full">
+      <div className="flex flex-col bg-fixed bg-cover bg-freePage h-full w-full">
         <div className="absolute mt-32">
-          <FilterFreelance />
+          <FilterFreelance status={status} setStatus={setStatus} />
         </div>
         {/* {<button className="text-white z-50" onClick={() => { getMission() }}>get</button> } */}
         <div className="flex justify-center items-center ml-[30%] mr-[1%]">
