@@ -12,12 +12,20 @@ const Footer = () => {
       </div>
       <div className="flex flex-row justify-around items-center w-1/6">
         <img
-          src="./assets/images/instagramLogo.png"
+          src="../assets/images/instagramLogo.png"
           alt="instagram"
           width="20"
         />
-        <img src="./assets/images/linkedinLogo.png" alt="linkedin" width="20" />
-        <img src="./assets/images/facebookLogo.png" alt="facebook" width="20" />
+        <img
+          src="../assets/images/linkedinLogo.png"
+          alt="linkedin"
+          width="20"
+        />
+        <img
+          src="../assets/images/facebookLogo.png"
+          alt="facebook"
+          width="20"
+        />
       </div>
       <div className="flex flex-row items-center font-primary text-main-2 justify-between ">
         <h2 className="pr-4">Call us </h2>

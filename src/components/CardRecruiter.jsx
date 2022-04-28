@@ -33,8 +33,8 @@ const CardRecruiter = ({
               onClick={heartClickFavorite}
               src={
                 isFavorite
-                  ? "../assets/images/heartFill.png"
-                  : "../assets/images/heartEmpty.png"
+                  ? "./assets/images/heartFill.png"
+                  : "./assets/images/heartEmpty.png"
               }
               alt="heart"
               className="cursor-pointer h-4 w-4"

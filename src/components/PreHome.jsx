@@ -45,7 +45,7 @@ const Prehome = () => {
           </h3>
         </div>
         <div className="flex sm:flex-col h-5/6 sm:h-5/6">
-          <div className="filter grayscale hover:filter-none w-1/2 bg-cover sm:bg-none bg-[url('./assets/images/FreelanceMainPic3.png')] sm:filter-none cursor-pointer sm:w-screen sm:h-2/5 sm:flex sm:flex-col sm:items-center sm:justify-center sm:border-b-2 sm:border-t-2">
+          <div className="filter grayscale hover:filter-none w-1/2 bg-cover sm:bg-none bg-freeHome sm:filter-none cursor-pointer sm:w-screen sm:h-2/5 sm:flex sm:flex-col sm:items-center sm:justify-center sm:border-b-2 sm:border-t-2">
             <div className=" mt-[28%] ml-[50%] sm:m-0">
               <h3 className="text-main-2 sm:text-2xl sm:text-center sm:font-title">
                 {" "}
@@ -65,7 +65,7 @@ const Prehome = () => {
               </div>
             </div>
           </div>
-          <div className="filter grayscale hover:filter-none w-1/2 sm:bg-none bg-cover bg-[url('./assets/images/recruiterMainPic.png')] sm:filter-none cursor-pointer sm:w-screen sm:h-2/5 sm:flex sm:flex-col sm:items-center sm:justify-center sm:border-b-2">
+          <div className="filter grayscale hover:filter-none w-1/2 sm:bg-none bg-cover bg-recruitHome sm:filter-none cursor-pointer sm:w-screen sm:h-2/5 sm:flex sm:flex-col sm:items-center sm:justify-center sm:border-b-2">
             <div className="mt-[28%] ml-[10%] sm:m-0">
               <h3 className="text-main-2 sm:text-2xl sm:text-center sm:font-title">
                 {" "}
