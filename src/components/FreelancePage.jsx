@@ -24,7 +24,7 @@ const FreelancePage = () => {
   return (
     <div className="h-screen w-screen">
       <NavBar />
-      <div className="flex flex-col bg-fixed bg-cover bg-[url('./assets/images/FreelanceBackground.png')] h-full w-full">
+      <div className="flex flex-col bg-fixed bg-cover bg-freePage h-full w-full">
         <div className="absolute mt-32">
           <FilterFreelance status={status} setStatus={setStatus} />
         </div>

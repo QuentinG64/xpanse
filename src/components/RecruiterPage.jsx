@@ -28,7 +28,7 @@ const RecruiterPage = () => {
   return (
     <div className="h-screen w-screen">
       <NavBar />
-      <div className="flex flex-col bg-cover bg-[url('./assets/images/recruiterBackground.png')] bg-fixed h-full w-full">
+      <div className="flex flex-col bg-cover bg-recruitPage bg-fixed h-full w-full">
         <div className="absolute mt-[11vh]">
           <FilterRecruiter status={status} setStatus={setStatus} />
         </div>
