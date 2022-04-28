@@ -5,8 +5,8 @@ import { Phrase, Char } from "animatedtxt";
 const NavBar = () => {
   return (
     <div className="fixed w-full z-50">
-      <nav className="font-title flex justify-between bg-transparent text-main-2 pt-6">
-        <p className="w-1/6  flex justify-around">
+      <nav className="font-title flex justify-between bg-transparent text-main-2 pt-[2%] sm:justify-around ">
+        <p className="w-1/5 flex justify-around">
           <Link to="/">
             <Phrase margin={15} size={20} color="white">
               <Char char="X" delay={0} />
@@ -18,7 +18,7 @@ const NavBar = () => {
             </Phrase>{" "}
           </Link>
         </p>
-        <ul className="w-4/6 space-x-4 flex justify-around bg-transparent">
+        <ul className="w-4/6 space-x-4 flex justify-around bg-transparent sm:hidden">
           <li className="hover:underline decoration-solid decoration-primary-1">
             <Link to="/freelance">FREELANCE</Link>
           </li>
