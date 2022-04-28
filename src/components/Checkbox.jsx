@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Checkbox = ({ value, title, status, setStatus }) => {
+const Checkbox = ({ value, title, mission, location, status, setStatus }) => {
   return (
     <div>
       <input
@@ -13,7 +13,10 @@ const Checkbox = ({ value, title, status, setStatus }) => {
           setStatus(value);
         }}
       />
-      {title} <br />
+      {title}
+      {location}
+      {mission}
+      <br />
     </div>
   );
 };
@@ -21,6 +24,8 @@ const Checkbox = ({ value, title, status, setStatus }) => {
 Checkbox.propTypes = {
   value: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
+  mission: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
   status: PropTypes.number.isRequired,
   setStatus: PropTypes.func.isRequired,
 };
