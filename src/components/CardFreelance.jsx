@@ -33,7 +33,10 @@ const CardFreelance = ({
               alt="heart"
               className="cursor-pointer h-4 w-4 absolute top-2 right-3"
             />
-            <h1 className="text-main-2 font-title text-sm h-14 mt-3 mr-[10%] text-transparent bg-clip-text bg-gradient-to-r from-slate-200 to-slate-300">
+            <h1 className="text-main-2 font-title text-sm h-14 mr-[10%] text-transparent bg-clip-text bg-gradient-to-r from-slate-200 to-slate-300">
+              {launchServiceProvider.name}
+            </h1>
+            <h1 className="text-main-2 font-title text-sm h-10 mt-3 mr-[10%] text-transparent bg-clip-text bg-gradient-to-r from-slate-200 to-slate-300">
               {launchServiceProvider.name}
             </h1>
           </div>
