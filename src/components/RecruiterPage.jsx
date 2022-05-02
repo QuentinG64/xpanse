@@ -26,10 +26,10 @@ const RecruiterPage = () => {
   }, [status]);
 
   return (
-    <div className="h-screen w-screen">
+    <div className="h-full w-full">
       <NavBar />
-      <div className="flex flex-col bg-cover bg-recruitPage bg-fixed h-full w-full">
-        <div className="absolute mt-[11vh]">
+      <div className="flex flex-col bg-cover bg-recruitPage bg-fixed">
+        <div className="absolute mt-[15vh]">
           <FilterRecruiter status={status} setStatus={setStatus} />
         </div>
         <div className="flex justify-center items-center ">
