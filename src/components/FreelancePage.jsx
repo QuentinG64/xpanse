@@ -47,9 +47,7 @@ const FreelancePage = () => {
   }, [isFilterOpened]);
 
   return (
-
     <div className="h-[100%] w-[100%]">
-
       <NavBar />
       <div className="flex flex-col bg-fixed bg-cover bg-freePage lg:items-center lg:justify-center">
         {/* Bouton "Filtrer" */}
@@ -82,7 +80,7 @@ const FreelancePage = () => {
           <div className="flex flex-wrap bg-transparent pt-24 pb-12 items-center gap-5 lg:pt-4 lg:justify-around">
             {missions &&
               missions.map((mission, index) => (
-                <CardFreelance key={index} {...mission} />
+                <CardFreelance key={index} {...mission} status={status} />
               ))}
           </div>
         </div>
