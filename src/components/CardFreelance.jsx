@@ -8,7 +8,6 @@ const CardFreelance = ({
   window_start: windowStart,
   rocket,
   pad,
-  mission,
 }) => {
   const [isFavorite, setIsFavorite] = useState(false);
 

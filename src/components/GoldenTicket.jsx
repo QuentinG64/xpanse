@@ -1,9 +1,8 @@
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
+import axios from "axios";
 import Button from "./Button";
 import NavBar from "./NavBar";
-import dataNextLaunch from "../data/dataNextLaunch";
-import { useEffect, useState } from "react";
-import axios from "axios";
 
 const GoldenTicket = () => {
   // Création usestate pour le next launch via API

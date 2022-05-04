@@ -1,9 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Checkbox from "./Checkbox";
-import SelectBoxFreelance from "./SelectBoxFreelance";
-import ModalDate from "./ModalDate";
-import SelectBoxRocket from "./SelectBoxRocket";
 
 const missions = [
   " Go for launch ", // (1)
