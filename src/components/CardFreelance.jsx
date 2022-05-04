@@ -16,13 +16,11 @@ const CardFreelance = ({
     setIsFavorite(!isFavorite);
   };
 
-  
   return (
     <Tilt>
-      <div className="w-60 h-80 lg:h-auto lg:w-80 rounded-2xl bg-gradient-to-t from-slate-200/40 to-slate-600/70 bg-opacity-10 backdrop-blur-lg relative z-2 shadow-5xl border border-opacity-5 border-r-0 border-b-0 backdrop-filter hover:border-2 ease-in duration-100">
+      <div className="w-60 h-80 lg:h-36 lg:w-80 rounded-2xl bg-gradient-to-t from-slate-200/40 to-slate-600/70 bg-opacity-10 backdrop-blur-lg relative z-2 shadow-5xl border border-opacity-5 border-r-0 border-b-0 backdrop-filter hover:border-2 ease-in duration-100">
         <div className="h-full w-full flex flex-col justify-around items-center ">
-
-          <div className="flex justify-between items-center w-full px-2">
+          <div className="flex justify-center items-center w-full lg:w-4/5 px-2">
             <input
               type="image"
               onClick={heartClickFavorite}
@@ -36,7 +34,6 @@ const CardFreelance = ({
               className="cursor-pointer h-4 w-4 absolute top-5 right-3"
             />
 
-
             <h1 className="text-main-2 font-title text-sm h-10 mt-3 lg:h-auto lg:m-0 lg:mt-2 lg:text-center mr-[10%] text-transparent bg-clip-text bg-gradient-to-r from-slate-200 to-slate-300">
               {launchServiceProvider.name}
             </h1>
@@ -49,12 +46,14 @@ const CardFreelance = ({
                   className="object-cover opacity-80"
                 />
               </div> */}
-       <div className="relative font-primary text-left w-full pl-4 pr-4 mb-7 lg:m-0">
+          <div className="relative font-primary text-left w-full pl-4 pr-4 mb-7 lg:m-0">
             <h2 className="text-main-2 font-primary h-10 text-sm mt-3 text-transparent bg-clip-text bg-gradient-to-r from-slate-200 to-slate-300 lg:m-0 lg:h-auto lg:text-center lg:mb-1">
-
               {missionName}
             </h2>
-            <p className="dataCard lg:m-0"> ⏱ {windowStart} </p>
+            <p className="dataCard lg:m-0 lg:text-center lg:mt-2">
+              {" "}
+              ⏱ {windowStart}{" "}
+            </p>
             <p className="dataCard lg:hidden">
               🚀{" "}
               <span className="font-second lg:hidden">
@@ -62,7 +61,9 @@ const CardFreelance = ({
               </span>
             </p>
 
-            <p className="dataCard">📍 {pad && pad.location.name} </p>
+            <p className="dataCard lg:m-0 lg:text-center">
+              📍 {pad && pad.location.name}{" "}
+            </p>
             {/* <p className="dataCard overflow-hidden pb-10">
 
               📋{" "}
@@ -71,8 +72,8 @@ const CardFreelance = ({
                 : " For more information, contact us"}{" "}
             </p> */}
             {/* TWITTER & INSTAGRAM PROPS */}
-            <div className="flex flex-row justify-evenly gap-5 align-center">
-              {/* <p className="font-second">
+            {/* <div className="flex flex-row justify-evenly gap-5 align-center"> */}
+            {/* <p className="font-second">
             {props.twitter ? (
               <a
                 className="text-blue-400 text-xs pb-10"
@@ -84,7 +85,7 @@ const CardFreelance = ({
             ) : null}
           </p> */}
 
-              {/* <p className="font-second">
+            {/* <p className="font-second">
             {props.instagram ? (
               <a
                 className="text-pink-400 text-xs"
@@ -95,7 +96,7 @@ const CardFreelance = ({
               </a>
             ) : null}
           </p> */}
-            </div>
+            {/* </div> */}
           </div>
 
           <button
