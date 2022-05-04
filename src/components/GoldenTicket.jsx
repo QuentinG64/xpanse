@@ -2,6 +2,7 @@ import { useNavigate } from "react-router";
 import Button from "./Button";
 import Countdown from "./Countdown.jsx";
 import NavBar from "./NavBar";
+import dataNextLaunch from "../data/dataNextLaunch";
 
 const GoldenTicket = () => {
   // fonction retournant la variable message indiquant si c'est win ou loose
@@ -20,6 +21,30 @@ const GoldenTicket = () => {
     }
     return win();
   };
+
+  // HOW TO GET CURRENT DATE IN YYYY-MM-DD
+  const today = new Date();
+  const date =
+    today.getFullYear() +
+    "-0" +
+    (today.getMonth() + 1) +
+    "-0" +
+    today.getDate();
+
+  //HOW TO GET CURRENT TIME IN GMT HH-MM-SS
+  const time =
+    today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+
+  console.log(date);
+  console.log(time);
+  // console.log(dataNextLaunch.net);
+  // console.log(dataNextLaunch.net.slice(0, 10));
+  // console.log(dataNextLaunch.net.slice(11, 19));
+
+  let dataTime = dataNextLaunch.net.slice(11, 19);
+
+  // let deltaTime = time - dataTime;
+  // console.log(deltaTime);
 
   return (
     // INITAL PAGE GOLDEN TICKET -- INTRODUCTION
