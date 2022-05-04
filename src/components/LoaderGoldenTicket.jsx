@@ -1,5 +1,4 @@
 import React from "react";
-import loader from "/assets/images/loader.gif";
 import NavBar from "./NavBar";
 
 const LoaderGoldenTicket = () => {
@@ -15,7 +14,7 @@ const LoaderGoldenTicket = () => {
           </span>
         </h1>
         <div className="h-90 w-90 absolute bottom-0 sm:h-80 sm:w-80">
-          <img src={loader} alt="loader" />
+          <img src="../../assets/images/loader.gif" alt="loader" />
         </div>
       </div>
     </div>
