@@ -2,8 +2,30 @@ import { useNavigate } from "react-router";
 import Button from "./Button";
 import NavBar from "./NavBar";
 import dataNextLaunch from "../data/dataNextLaunch";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const GoldenTicket = () => {
+  // Création usestate pour le next launch via API
+  const [launch, setLaunch] = useState("");
+
+  // Création de l'appel API pour le futur launch spatial
+  const getLaunch = () => {
+    axios
+      .get(`https://ll.thespacedevs.com/2.2.0/launch/upcoming`)
+      .then((res) => res.data.results[0])
+      .then((data) => {
+        setLaunch(data.net);
+      })
+      .catch((err) => console.log(err));
+  };
+
+  useEffect(() => {
+    getLaunch();
+  }, []);
+
+  // Création useEffect pour le chargement du state au démarrage de la page GoldenTicket
+
   // fonction retournant la variable message indiquant si c'est win ou loose
   const navigate = useNavigate();
   const loose = () => {
@@ -21,29 +43,8 @@ const GoldenTicket = () => {
     return win();
   };
 
-  // HOW TO GET CURRENT DATE IN YYYY-MM-DD
-  const today = new Date();
-  const date =
-    today.getFullYear() +
-    "-0" +
-    (today.getMonth() + 1) +
-    "-0" +
-    today.getDate();
-
-  //HOW TO GET CURRENT TIME IN GMT HH-MM-SS
-  const time =
-    today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-
-  // console.log(date);
-  // console.log(time);
-
-  const launchTime = dataNextLaunch.net.slice(11, 19);
-  const launchDate = dataNextLaunch.net.slice(0, 10);
-
-  console.log(launchDate);
-
-  // let deltaTime = time - dataTime;
-  // console.log(deltaTime);
+  const launchTime = launch.slice(11, 19);
+  const launchDate = launch.slice(0, 10);
 
   return (
     // INITAL PAGE GOLDEN TICKET -- INTRODUCTION
