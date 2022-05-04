@@ -18,7 +18,7 @@ const missions = [
 
 const FilterFreelance = ({ status, setStatus }) => {
   return (
-    <div className="border-2 rounded-xl h-auto w-[25%] mb-12 px-4 py-2 fixed ">
+    <div className="border-2 rounded-xl h-auto w-[25%] mb-12 px-4 py-2 fixed lg:hidden">
       <h1 className="font-title text-main-2 text-lg">
         SELECT YOUR NEXT MISSION
       </h1>

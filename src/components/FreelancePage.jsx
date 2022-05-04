@@ -4,10 +4,10 @@ import CardFreelance from "./CardFreelance";
 import FilterFreelance from "./FilterFreelance";
 import NavBar from "./NavBar";
 import MobileFilterFreelance from "./MobileFilterFreelance";
-// import dataMission from "../data/dataMission";
+import dataMission from "../data/dataMission";
 
 const FreelancePage = () => {
-  const [missions, setMissions] = useState([]);
+  const [missions, setMissions] = useState(dataMission);
   const [status, setStatus] = useState("");
   const [isFilterOpened, setIsFilterOpened] = useState(false);
   const [FilterOpened, setFilterOpened] = useState("lg:block");
@@ -19,7 +19,11 @@ const FreelancePage = () => {
 
   // je crée une fonction pour changer la variable FilterOpened. Elle doit prendre selon qu'elle soit ouverte la valeur hidden ou block.
   const handleFilterOpenedValue = () => {
-    isFilterOpened ? setFilterOpened("lg:block") : setFilterOpened("lg:hidden");
+    if (isFilterOpened === true) {
+      setFilterOpened("lg:block");
+    } else {
+      setFilterOpened("lg:hidden");
+    }
   };
 
   console.log(FilterOpened, isFilterOpened);
@@ -56,14 +60,18 @@ const FreelancePage = () => {
         >
           <h2 className="font-title text-blue-900 text-lg px-3"> Filtrer </h2>
           <img
-            src="../assets/images/chevronFreelance.png"
+            src={
+              !isFilterOpened
+                ? "../assets/images/chevronFreelance.png"
+                : "../assets/images/chevronFreelanceInverted.png"
+            }
             alt="chevron"
             width="30px"
-            className="mt-2 mx-3"
+            className={!isFilterOpened ? "mt-2 mx-3" : "mt-0 mx-3"}
           />
         </div>
 
-        <div className="absolute mt-32 lg:static lg:mt-0 lg:w-[95%]">
+        <div className="absolute mt-32 lg:static lg:mt-0">
           <FilterFreelance status={status} setStatus={setStatus} />
           <MobileFilterFreelance
             status={status}
@@ -76,7 +84,7 @@ const FreelancePage = () => {
           <div className="flex flex-wrap bg-transparent pt-24 pb-12 items-center gap-5 lg:pt-4 lg:justify-around">
             {missions &&
               missions.map((mission, index) => (
-                <CardFreelance key={index} {...mission} />
+                <CardFreelance key={index} {...mission} status={status} />
               ))}
           </div>
         </div>

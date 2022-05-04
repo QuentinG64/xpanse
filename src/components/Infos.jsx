@@ -4,11 +4,11 @@ import Button from "./Button";
 const Infos = () => {
   return (
     <div className=" bg-main-1 text-main-2 flex flex-row">
-      <div className="mt-20 mb-20">
+      <div className="mt-20 mb-20 sm:hidden">
         <img src="../assets/images/astronautAboutUs.png" alt="astronaut" />
       </div>
       <div className="">
-        <div className="absolute">
+        <div className="absolute sm:flex">
           <h1 className="font-title  text-main-2 text-6xl w-9/12 pt-32 ">
             200
           </h1>
