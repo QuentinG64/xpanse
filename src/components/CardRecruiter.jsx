@@ -37,7 +37,7 @@ const CardRecruiter = ({
                   : "./assets/images/heartEmpty.png"
               }
               alt="heart"
-              className="cursor-pointer h-4 w-4"
+              className="cursor-pointer h-4 w-4 absolute top-4 right-1"
             />
           </div>
 

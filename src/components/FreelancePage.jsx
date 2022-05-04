@@ -30,7 +30,7 @@ const FreelancePage = () => {
 
   const getMissions = () => {
     axios
-      .get(`https://ll.thespacedevs.com/2.2.0/launch/?limit=8&status=${status}`)
+      .get(`https://ll.thespacedevs.com/2.2.0/launch/?status=${status}`)
       .then((res) => res.data.results)
       .then((data) => {
         setMissions(data);
@@ -47,7 +47,9 @@ const FreelancePage = () => {
   }, [isFilterOpened]);
 
   return (
-    <div className="h-full w-full">
+
+    <div className="h-[100%] w-[100%]">
+
       <NavBar />
       <div className="flex flex-col bg-fixed bg-cover bg-freePage lg:items-center lg:justify-center">
         {/* Bouton "Filtrer" */}

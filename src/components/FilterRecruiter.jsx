@@ -3,15 +3,15 @@ import PropTypes from "prop-types";
 import Checkbox from "./Checkbox";
 
 const titles = [
-  "Active",
-  "Retired",
-  "In-Training",
-  "Lost In Flight",
-  "Lost In Training",
-  "Died While In Active Service",
-  "Dismissed",
-  "Resigned during Training",
-  "Deceased",
+  " Active",
+  " Retired",
+  " In-Training",
+  " Lost In Flight",
+  " Lost In Training",
+  " Died While In Active Service",
+  " Dismissed",
+  " Resigned during Training",
+  " Deceased",
 ];
 
 const FilterRecruiter = ({ status, setStatus }) => {
