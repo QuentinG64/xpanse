@@ -1,7 +1,15 @@
 import React, { useState } from "react";
 import Tilt from "react-parallax-tilt";
+import PropTypes from "prop-types";
 
-const CardFreelance = (props) => {
+const CardFreelance = ({
+  name: missionName,
+  launch_service_provider: launchServiceProvider,
+  window_start: windowStart,
+  rocket,
+  pad,
+  mission,
+}) => {
   const [isFavorite, setIsFavorite] = useState(false);
 
   const heartClickFavorite = () => {
@@ -10,77 +18,112 @@ const CardFreelance = (props) => {
 
   return (
     <Tilt>
-      <div className="w-56 h-80 rounded-2xl bg-gradient-to-t from-gray-400/30 to-slate-600/80 bg-opacity-10 backdrop-blur-lg relative z-2 shadow-5xl border border-opacity-5 border-r-0 border-b-0 backdrop-filter hover:border-2 ease-in duration-100">
+      <div className="w-60 h-80 rounded-2xl bg-gradient-to-t from-slate-200/40 to-slate-600/70 bg-opacity-10 backdrop-blur-lg relative z-2 shadow-5xl border border-opacity-5 border-r-0 border-b-0 backdrop-filter hover:border-2 ease-in duration-100">
         <div className="h-full w-full flex flex-col justify-around items-center ">
           <div className="w-full px-2">
-            <img
+            <input
+              type="image"
               onClick={heartClickFavorite}
+              onKeyDown={heartClickFavorite}
               src={
                 isFavorite
-                  ? "../assets/images/heartFill.png"
-                  : "../assets/images/heartEmpty.png"
+                  ? "./assets/images/heartFill.png"
+                  : "./assets/images/heartEmpty.png"
               }
               alt="heart"
               className="cursor-pointer h-4 w-4 absolute top-2 right-3"
             />
-            <h1 className="text-main-2 font-title text-center text-sm mt-3 text-transparent bg-clip-text bg-gradient-to-r from-slate-200 to-slate-300">
-              {props.launch_service_provider.name}
+            <h1 className="text-main-2 font-title text-sm h-14 mr-[10%] text-transparent bg-clip-text bg-gradient-to-r from-slate-200 to-slate-300">
+              {launchServiceProvider.name}
+            </h1>
+            <h1 className="text-main-2 font-title text-sm h-10 mt-3 mr-[10%] text-transparent bg-clip-text bg-gradient-to-r from-slate-200 to-slate-300">
+              {launchServiceProvider.name}
             </h1>
           </div>
 
           {/* <div className="h-max w-max overflow-hidden mt-2 rounded-lg ">
-            <img
-              src={props.profile_image_thumbnail}
-              alt={props.name}
-              className="object-cover opacity-80"
-            />
-          </div> */}
+                <img
+                  src={props.profile_image_thumbnail}
+                  alt={props.name}
+                  className="object-cover opacity-80"
+                />
+              </div> */}
 
-          <div className="relative font-primary text-left w-full pl-4 pr-4 pb-2">
-            <h2 className="text-main-2 font-primary text-center text-sm mt-3 text-transparent bg-clip-text bg-gradient-to-r from-slate-200 to-slate-300">
-              {props.name.mission}
+          <div className="relative font-primary text-left w-full pl-4 pr-4 mb-7 overflow-scroll">
+            <h2 className="text-main-2 font-primary h-10 text-sm mt-3 text-transparent bg-clip-text bg-gradient-to-r from-slate-200 to-slate-300">
+              {missionName}
             </h2>
-            <p className="dataCard">Nationality:</p>
-            <p className="dataCard">Date of birth: </p>
-            <p className="dataCard">Agency: </p>
-            <p className="dataCard">Status: </p>
+            <p className="dataCard"> ⏱ {windowStart} </p>
+            <p className="dataCard">
+              🚀{" "}
+              <span className="font-second">
+                {rocket && rocket.configuration.name}
+              </span>
+            </p>
+            <p className="dataCard">📍 {pad && pad.location.name} </p>
+            <p className="dataCard overflow-hidden pb-10">
+              📋{" "}
+              {mission
+                ? mission.description
+                : " For more information, contact us"}{" "}
+            </p>
             {/* TWITTER & INSTAGRAM PROPS */}
             <div className="flex flex-row justify-evenly gap-5 align-center">
               {/* <p className="font-second">
-                {props.twitter ? (
-                  <a
-                    className="text-blue-400 text-xs pb-10"
-                    href={props.twitter}
-                    target="_blank"
-                  >
-                    Twitter
-                  </a>
-                ) : null}
-              </p> */}
+            {props.twitter ? (
+              <a
+                className="text-blue-400 text-xs pb-10"
+                href={props.twitter}
+                target="_blank"
+              >
+                Twitter
+              </a>
+            ) : null}
+          </p> */}
 
               {/* <p className="font-second">
-                {props.instagram ? (
-                  <a
-                    className="text-pink-400 text-xs"
-                    href={props.instagram}
-                    target="_blank"
-                  >
-                    Instagram
-                  </a>
-                ) : null}
-              </p> */}
+            {props.instagram ? (
+              <a
+                className="text-pink-400 text-xs"
+                href={props.instagram}
+                target="_blank"
+              >
+                Instagram
+              </a>
+            ) : null}
+          </p> */}
             </div>
           </div>
 
-          {/* <button className="cursor-pointer text-xs mb-3 rounded-2xl px-4 py-1 bg-white bg-opacity-50 hover:bg-white hover:bg-opacity-80 ">
-            <a href={props.wiki} target="_blank">
+          <button
+            type="button"
+            className="cursor-pointer text-xs mb-3 rounded-2xl px-4 py-1 bg-white bg-opacity-50 hover:bg-white hover:bg-opacity-80 "
+          >
+            <a href={pad && pad.wiki_url} target="_blank" rel="noreferrer">
               READ MORE
             </a>
-          </button> */}
+          </button>
         </div>
       </div>
     </Tilt>
   );
+};
+
+CardFreelance.propTypes = {
+  name: PropTypes.string.isRequired,
+  launch_service_provider: PropTypes.shape({ name: PropTypes.string })
+    .isRequired,
+  window_start: PropTypes.string.isRequired,
+  rocket: PropTypes.shape({
+    configuration: PropTypes.shape({ name: PropTypes.string }),
+  }).isRequired,
+  pad: PropTypes.shape({
+    location: PropTypes.shape({ name: PropTypes.string }),
+    wiki_url: PropTypes.string,
+  }).isRequired,
+  mission: PropTypes.shape({
+    description: PropTypes.string,
+  }).isRequired,
 };
 
 //

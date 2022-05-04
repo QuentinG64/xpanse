@@ -1,6 +1,6 @@
 import React from "react";
 
-const BlockTxt = () => {
+const BlockTxt = ({ arrow }) => {
   return (
     <div className="bg-main-1">
       <div className="grid gap-60 grid-cols-3 ml-20 mr-20">
@@ -23,9 +23,9 @@ const BlockTxt = () => {
             montes, nascetur ridiculus mus.
             <br />
           </h4>
-          <div className="flex flex-row mt-4">
+          <div className="flex flex-row mt-4 items-center">
             <img
-              src="../assets/images/arrowAboutUs.png"
+              src="./assets/images/arrowAboutUs.png"
               alt="arrow"
               width="120"
             />
@@ -51,11 +51,11 @@ const BlockTxt = () => {
             montes, nascetur ridiculus mus.
             <br />
           </h4>
-          <div className="flex flex-row mt-4">
+          <div className="flex flex-row mt-4 items-center">
             <img
               src="../assets/images/arrowAboutUs.png"
               alt="arrow"
-              width="100"
+              width="120"
             />
             <h5 className="text-primary-1 ml-4"> Learn More </h5>
           </div>
