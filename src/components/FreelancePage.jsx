@@ -19,7 +19,11 @@ const FreelancePage = () => {
 
   // je crée une fonction pour changer la variable FilterOpened. Elle doit prendre selon qu'elle soit ouverte la valeur hidden ou block.
   const handleFilterOpenedValue = () => {
-    isFilterOpened ? setFilterOpened("lg:block") : setFilterOpened("lg:hidden");
+    if (isFilterOpened === true) {
+      setFilterOpened("lg:block");
+    } else {
+      setFilterOpened("lg:hidden");
+    }
   };
 
   console.log(FilterOpened, isFilterOpened);
