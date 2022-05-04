@@ -1,9 +1,9 @@
 import React from "react";
 
-const BlockTxt = ({ arrow }) => {
+const BlockTxt = () => {
   return (
     <div className="bg-main-1">
-      <div className="grid gap-60 grid-cols-3 ml-20 mr-20">
+      <div className="grid gap-60 grid-cols-3 ml-20 mr-20 sm:grid-cols-1 sm:gap-10">
         <div className="flex flex-col border-t-4 text-main-2 mt-20 ">
           <div className="font-title  pt-5 pb-10 ">
             <h1 className="text-4xl text-primary-1">
