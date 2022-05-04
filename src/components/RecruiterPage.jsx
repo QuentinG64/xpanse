@@ -29,9 +29,7 @@ const RecruiterPage = () => {
 
   const getAstro = () => {
     axios
-      .get(
-        `https://ll.thespacedevs.com/2.2.0/astronaut/?status=${status}`
-      )
+      .get(`https://ll.thespacedevs.com/2.2.0/astronaut/?status=${status}`)
       .then((res) => res.data.results)
       .then((data) => {
         setAstros(data);
@@ -61,10 +59,14 @@ const RecruiterPage = () => {
         >
           <h2 className="font-title text-red-800 text-lg px-3"> Filtrer </h2>
           <img
-            src="../assets/images/chevronRecruter.png"
+            src={
+              !isFilterOpened
+                ? "../assets/images/chevronRecruter.png"
+                : "../assets/images/chevronRecruterInverted.png"
+            }
             alt="chevron"
             width="30px"
-            className="mt-2 mx-3"
+            className={!isFilterOpened ? "mt-1 mx-3" : "mt-0 mx-3"}
           />
         </div>
         <div className="absolute mt-32 lg:static lg:mt-0 lg:w-[95%]">
@@ -77,7 +79,6 @@ const RecruiterPage = () => {
         </div>
 
         <div className="flex justify-center items-center ml-[30%] mr-[1%] lg:m-0">
-
           <div className="flex flex-wrap bg-transparent pt-24 pb-12 items-center gap-5 lg:pt-4 lg:justify-around">
             {astros.map((astro, index) => (
               <CardRecruiter key={index} {...astro} />
