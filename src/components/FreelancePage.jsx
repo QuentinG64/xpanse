@@ -60,10 +60,14 @@ const FreelancePage = () => {
         >
           <h2 className="font-title text-blue-900 text-lg px-3"> Filtrer </h2>
           <img
-            src="../assets/images/chevronFreelance.png"
+            src={
+              !isFilterOpened
+                ? "../assets/images/chevronFreelance.png"
+                : "../assets/images/chevronFreelanceInverted.png"
+            }
             alt="chevron"
             width="30px"
-            className="mt-2 mx-3"
+            className={!isFilterOpened ? "mt-2 mx-3" : "mt-0 mx-3"}
           />
         </div>
 
