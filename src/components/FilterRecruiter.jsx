@@ -1,3 +1,4 @@
+import React from "react";
 import PropTypes from "prop-types";
 import Checkbox from "./Checkbox";
 
@@ -15,7 +16,7 @@ const titles = [
 
 const FilterRecruiter = ({ status, setStatus }) => {
   return (
-    <div className="border-2 rounded-xl h-auto px-4 py-2 fixed">
+    <div className="border-2 rounded-xl h-auto w-[25%] mb-12 px-4 py-2 fixed lg:hidden">
       <h1 className="font-title text-main-2 text-lg">
         SELECT YOUR NEXT PARTNER
       </h1>
@@ -41,8 +42,11 @@ const FilterRecruiter = ({ status, setStatus }) => {
 };
 
 FilterRecruiter.propTypes = {
-  status: PropTypes.number.isRequired,
+  status: PropTypes.number,
   setStatus: PropTypes.func.isRequired,
 };
 
+FilterRecruiter.defaultProps = {
+  status: "",
+};
 export default FilterRecruiter;
