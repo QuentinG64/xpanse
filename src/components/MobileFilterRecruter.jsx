@@ -14,9 +14,11 @@ const titles = [
   "Deceased",
 ];
 
-const FilterRecruiter = ({ status, setStatus }) => {
+const MobileFilterRecruter = ({ status, setStatus, FilterOpened }) => {
   return (
-    <div className="border-2 rounded-xl h-auto w-[25%] mb-12 px-4 py-2 fixed overflow-scroll lg:hidden">
+    <div
+      className={`border-2 rounded-xl h-auto w-[95%] mb-12 px-4 py-6 lg:mx-2 lg:mt-5 lg:static ${FilterOpened} overflow-scroll hidden`}
+    >
       <h1 className="font-title text-main-2 text-lg">
         SELECT YOUR NEXT PARTNER
       </h1>
@@ -41,12 +43,14 @@ const FilterRecruiter = ({ status, setStatus }) => {
   );
 };
 
-FilterRecruiter.propTypes = {
+MobileFilterRecruter.propTypes = {
   status: PropTypes.number,
   setStatus: PropTypes.func.isRequired,
+  FilterOpened: PropTypes.string.isRequired,
 };
 
-FilterRecruiter.defaultProps = {
-  status: "",
+MobileFilterRecruter.defaultProps = {
+  status: 0,
 };
-export default FilterRecruiter;
+
+export default MobileFilterRecruter;

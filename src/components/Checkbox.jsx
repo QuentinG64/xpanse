@@ -24,10 +24,16 @@ const Checkbox = ({ value, title, mission, location, status, setStatus }) => {
 Checkbox.propTypes = {
   value: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
-  mission: PropTypes.string.isRequired,
-  location: PropTypes.string.isRequired,
-  status: PropTypes.number.isRequired,
+  mission: PropTypes.string,
+  location: PropTypes.string,
+  status: PropTypes.number,
   setStatus: PropTypes.func.isRequired,
+};
+
+Checkbox.defaultProps = {
+  mission: "",
+  location: "",
+  status: "",
 };
 
 export default Checkbox;
