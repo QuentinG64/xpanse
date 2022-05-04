@@ -16,7 +16,7 @@ const titles = [
 
 const FilterRecruiter = ({ status, setStatus }) => {
   return (
-    <div className="border-2 rounded-xl h-auto w-[25%] mb-12 px-4 py-2 fixed overflow-scroll lg:hidden">
+    <div className="border-2 rounded-xl h-auto w-[25%] mb-12 px-4 py-2 fixed lg:hidden">
       <h1 className="font-title text-main-2 text-lg">
         SELECT YOUR NEXT PARTNER
       </h1>
