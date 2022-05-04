@@ -4,10 +4,10 @@ import CardFreelance from "./CardFreelance";
 import FilterFreelance from "./FilterFreelance";
 import NavBar from "./NavBar";
 import MobileFilterFreelance from "./MobileFilterFreelance";
-// import dataMission from "../data/dataMission";
+import dataMission from "../data/dataMission";
 
 const FreelancePage = () => {
-  const [missions, setMissions] = useState([]);
+  const [missions, setMissions] = useState(dataMission);
   const [status, setStatus] = useState("");
   const [isFilterOpened, setIsFilterOpened] = useState(false);
   const [FilterOpened, setFilterOpened] = useState("lg:block");
@@ -19,7 +19,11 @@ const FreelancePage = () => {
 
   // je crée une fonction pour changer la variable FilterOpened. Elle doit prendre selon qu'elle soit ouverte la valeur hidden ou block.
   const handleFilterOpenedValue = () => {
-    isFilterOpened ? setFilterOpened("lg:block") : setFilterOpened("lg:hidden");
+    if (isFilterOpened === true) {
+      setFilterOpened("lg:block");
+    } else {
+      setFilterOpened("lg:hidden");
+    }
   };
 
   console.log(FilterOpened, isFilterOpened);
@@ -43,7 +47,9 @@ const FreelancePage = () => {
   }, [isFilterOpened]);
 
   return (
+
     <div className="h-[100%] w-[100%]">
+
       <NavBar />
       <div className="flex flex-col bg-fixed bg-cover bg-freePage lg:items-center lg:justify-center">
         {/* Bouton "Filtrer" */}
@@ -63,7 +69,7 @@ const FreelancePage = () => {
           />
         </div>
 
-        <div className="absolute mt-32 lg:static lg:mt-0 lg:w-[95%]">
+        <div className="absolute mt-32 lg:static lg:mt-0">
           <FilterFreelance status={status} setStatus={setStatus} />
           <MobileFilterFreelance
             status={status}
