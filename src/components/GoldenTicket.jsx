@@ -28,7 +28,7 @@ const GoldenTicket = () => {
       <h1 className="font-title text-main-2 text-6xl w-9/12 pt-32 pb-4 pl-[3%] sm:text-3xl sm:w-screen sm:text-center sm:pr-[3%] sm:pt-[15%]">
         WILL YOU BE THE NEXT SPACE EXPLORER?
       </h1>
-      <h2 className="font-title text-main-2 text-3xl pt-[3%] pb-10 pl-[3%] sm:text-4xl sm:text-center sm:text-primary-1 sm:border-t-2 sm:w-4/6 sm:m-auto">
+      <h2 className="font-title text-main-2 text-3xl pt-[3%] pb-10 pl-[3%] sm:text-4xl sm:text-center sm:text-primary-1 sm:border-t-2 sm:w-4/6 sm:m-auto sm:mt-6">
         Next launch in
       </h2>
       <Countdown />
