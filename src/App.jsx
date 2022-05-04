@@ -11,7 +11,7 @@ import AboutUs from "./components/AboutUs";
 
 function App() {
   return (
-    <div className="App h-screen w-screen bg-main-1">
+    <div className="App h-full w-full bg-main-1">
       <Routes>
         <Route path="/" element={<PreHome />} />
         <Route path="/freelance" element={<Freelance />} />
