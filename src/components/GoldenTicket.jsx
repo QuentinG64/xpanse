@@ -20,11 +20,11 @@ const GoldenTicket = () => {
       .catch((err) => console.log(err));
   };
 
+  // Création useEffect pour le chargement du state au démarrage de la page GoldenTicket
+
   useEffect(() => {
     getLaunch();
   }, []);
-
-  // Création useEffect pour le chargement du state au démarrage de la page GoldenTicket
 
   // fonction retournant la variable message indiquant si c'est win ou loose
   const navigate = useNavigate();
