@@ -5,14 +5,33 @@ import { MenuOutlined } from "@material-ui/icons";
 import MenuResponsiv from "./MenuResponsiv";
 
 const NavBar = () => {
+  // change nav background on scroll change
+  const [color, setColor] = useState(false);
+  const changeColor = () => {
+    if (window.scrollY >= 20) {
+      setColor(true);
+    } else {
+      setColor(false);
+    }
+  };
+  console.log(color);
+
+  window.addEventListener("scroll", changeColor);
+  // settings mobile nav
   const [active, setActive] = useState(false);
   const showMenu = () => {
     setActive(!active);
   };
 
   return (
-    <div className="fixed w-full z-50">
-      <nav className="font-title flex justify-between bg-transparent text-main-2 pt-[2%] sm:justify-around ">
+    <div
+      className={
+        color
+          ? "bg-black/10 backdrop-blur-sm fixed w-full z-50 lg:h-50"
+          : "bg-transparent fixed w-full z-50 lg:bg-transparent"
+      }
+    >
+      <nav className="font-title flex justify-between text-main-2 pt-[2%] pb-[2%] sm:justify-around ">
         <p className="w-1/5 flex justify-around lg:hidden">
           <Link to="/">
             <Phrase margin={15} size={20} color="white">
@@ -39,7 +58,7 @@ const NavBar = () => {
             </Link>
           </div>
         </div>
-        <ul className="w-4/6 space-x-4 flex justify-around bg-transparent lg:hidden">
+        <ul className="w-4/6 space-x-4 flex justify-around lg:hidden">
           <li className="hover:underline decoration-solid decoration-primary-1">
             <Link to="/freelance">FREELANCE</Link>
           </li>
