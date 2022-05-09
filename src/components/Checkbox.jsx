@@ -16,7 +16,6 @@ const Checkbox = ({ value, title, mission, location, status, setStatus }) => {
       {title}
       {location}
       {mission}
-      <br />
     </div>
   );
 };

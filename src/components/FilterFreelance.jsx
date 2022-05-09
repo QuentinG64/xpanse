@@ -35,24 +35,6 @@ const FilterFreelance = ({ status, setStatus }) => {
             />
           ))}
         </div>
-        {/* <div className="mt-7">
-          <h2 className="font-title text-main-2 text-sm py-1">
-            FILTER BY AGENCY
-          </h2>
-          <SelectBoxFreelance />
-        </div>
-        <div className="mt-7">
-          <h2 className="font-title text-main-2 text-sm py-1">
-            FILTER BY ROCKET
-          </h2>
-          <SelectBoxRocket />
-        </div>
-        <div className="mt-7">
-          <h2 className="font-title text-main-2 text-sm py-1">
-            FILTER BY DATE
-          </h2>
-          <ModalDate />
-        </div> */}
       </div>
     </div>
   );

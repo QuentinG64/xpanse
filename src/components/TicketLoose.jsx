@@ -5,17 +5,18 @@ import NavBar from "./NavBar";
 import LoaderGoldenTicket from "./LoaderGoldenTicket";
 
 const TicketLoose = () => {
-  const navigate = useNavigate();
-  const tryAgain = () => {
-    navigate("/goldenticket");
-  };
-
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
     }, 3000);
   }, []);
+
+  const navigate = useNavigate();
+
+  const tryAgain = () => {
+    navigate("/goldenticket");
+  };
 
   return loading ? (
     <LoaderGoldenTicket />
@@ -35,12 +36,8 @@ const TicketLoose = () => {
           role="button"
           className="pl-7 z-10 pt-5"
           tabIndex={0}
-          onKeyDown={() => {
-            tryAgain();
-          }}
-          onClick={() => {
-            tryAgain();
-          }}
+          onKeyDown={tryAgain}
+          onClick={tryAgain}
         >
           <Button text="WANNA TRY AGAIN?" />
         </div>
@@ -48,7 +45,7 @@ const TicketLoose = () => {
           <img
             src="../../assets/images/bird.gif"
             alt="win"
-            style={{ height: "25rem", marginLeft: "30rem" }}
+            className="h-96 ml-96"
           />
         </div>
       </div>

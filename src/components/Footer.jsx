@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// Footer fait vite fait - modifs a effectuer //
 
 const Footer = () => {
   return (

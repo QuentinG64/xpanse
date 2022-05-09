@@ -35,6 +35,6 @@ const MenuResponsiv = ({ showMenu, active }) => {
 
 MenuResponsiv.propTypes = {
   showMenu: PropTypes.string.isRequired,
-  active: PropTypes.string.isRequired,
+  active: PropTypes.bool.isRequired,
 };
 export default MenuResponsiv;
