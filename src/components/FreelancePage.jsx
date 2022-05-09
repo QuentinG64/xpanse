@@ -10,23 +10,16 @@ const FreelancePage = () => {
   const [missions, setMissions] = useState(dataMission);
   const [status, setStatus] = useState("");
   const [isFilterOpened, setIsFilterOpened] = useState(false);
-  const [FilterOpened, setFilterOpened] = useState("lg:block");
-
-  // je créé une fonction pour changer la variable FilterOpened au clic du bouton filtre ou du bouton apply
-  const handleIsFilterOpened = () => {
-    setIsFilterOpened(!isFilterOpened);
-  };
+  const [filterOpenedCss, setFilterOpenedCss] = useState("lg:block");
 
   // je crée une fonction pour changer la variable FilterOpened. Elle doit prendre selon qu'elle soit ouverte la valeur hidden ou block.
   const handleFilterOpenedValue = () => {
     if (isFilterOpened === true) {
-      setFilterOpened("lg:block");
+      setFilterOpenedCss("lg:block");
     } else {
-      setFilterOpened("lg:hidden");
+      setFilterOpenedCss("lg:hidden");
     }
   };
-
-  console.log(FilterOpened, isFilterOpened);
 
   const getMissions = () => {
     axios
@@ -55,8 +48,8 @@ const FreelancePage = () => {
           className="lg:h-10 lg:w-60 lg:bg-white/95 lg:mt-14 lg:flex lg:flex-row lg:justify-between lg:items-center lg:rounded-xl lg:border-2 hidden"
           role="button"
           tabIndex={0}
-          onKeyDown={handleIsFilterOpened}
-          onClick={handleIsFilterOpened}
+          onKeyDown={() => setIsFilterOpened(!isFilterOpened)}
+          onClick={() => setIsFilterOpened(!isFilterOpened)}
         >
           <h2 className="font-title text-blue-900 text-lg px-3"> Filtrer </h2>
           <img
@@ -76,10 +69,9 @@ const FreelancePage = () => {
           <MobileFilterFreelance
             status={status}
             setStatus={setStatus}
-            FilterOpened={FilterOpened}
+            filterOpenedCss={filterOpenedCss}
           />
         </div>
-        {/* {<button className="text-white z-50" onClick={() => { getMission() }}>get</button> } */}
         <div className="flex justify-center items-center ml-[30%] mr-[1%] lg:m-0">
           <div className="flex flex-wrap bg-transparent pt-24 pb-12 items-center gap-5 lg:pt-4 lg:justify-around">
             {missions &&

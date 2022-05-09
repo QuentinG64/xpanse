@@ -4,10 +4,11 @@ import CardRecruiter from "./CardRecruiter";
 import FilterRecruiter from "./FilterRecruiter";
 import MobileFilterRecruter from "./MobileFilterRecruter";
 import NavBar from "./NavBar";
+import dataAstros from "../data/dataAstros";
 
 const RecruiterPage = () => {
-  const [astros, setAstros] = useState([]);
-  const [status, setStatus] = useState("");
+  const [astros, setAstros] = useState(dataAstros);
+  const [status, setStatus] = useState(null);
   const [isFilterOpened, setIsFilterOpened] = useState(false);
   const [FilterOpened, setFilterOpened] = useState("lg:block");
 
@@ -24,8 +25,6 @@ const RecruiterPage = () => {
       setFilterOpened("lg:hidden");
     }
   };
-
-  console.log(FilterOpened, isFilterOpened);
 
   const getAstro = () => {
     axios
