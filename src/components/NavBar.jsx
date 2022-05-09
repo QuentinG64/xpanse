@@ -5,6 +5,23 @@ import { MenuOutlined } from "@material-ui/icons";
 import MenuResponsiv from "./MenuResponsiv";
 
 const NavBar = () => {
+  // --> change nav background on scroll <---
+  //   const [color, setColor] = useState(false);
+  //   const changeColor = () => {
+  //     if (window.scrollY >= 20) {
+  //       setColor(true);
+  //     } else {
+  //       setColor(false);
+  //     }
+  //   };
+  //   window.addEventListener("scroll", changeColor);
+
+  // --> Parametres à ajouter <--
+  // color
+  //           ? "bg-black/10 backdrop-blur-sm fixed w-full z-50 lg:h-50"
+  //           : "bg-transparent fixed w-full z-50 lg:bg-transparent"
+  //       }
+
   const [active, setActive] = useState(false);
   const showMenu = () => {
     setActive(!active);
