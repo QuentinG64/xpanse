@@ -6,7 +6,7 @@ import { Phrase, Char } from "animatedtxt";
 
 const MenuResponsiv = ({ showMenu, active }) => {
   return (
-    <div>
+    <div className="z-50 fixed">
       <ul
         className={
           active
@@ -14,7 +14,7 @@ const MenuResponsiv = ({ showMenu, active }) => {
             : "hidden"
         }
       >
-        <div className="absolute right-6 xs:hidden top-6 scale-x-100 ">
+        <div className="absolute right-6 xs:hidden top-6 scale-x-100 z-50">
           <Close onClick={showMenu} className="cursor-pointer scale-x-100" />
         </div>
         <Link to="/">
@@ -30,13 +30,13 @@ const MenuResponsiv = ({ showMenu, active }) => {
         <li className="hover:underline decoration-solid decoration-primary-1">
           <Link to="/freelance">FREELANCE</Link>
         </li>
-        <li className="hover:underline decoration-solid decoration-primary-1">
+        <li className="hover:underline decoration-solid decoration-primary-1 z-50">
           <Link to="/recruiterpage">RECRUITER</Link>
         </li>
-        <li className="hover:underline decoration-solid decoration-primary-1">
+        <li className="hover:underline decoration-solid decoration-primary-1 z-50">
           <Link to="/goldenticket">GOLDEN TICKET</Link>
         </li>
-        <li className="hover:underline decoration-solid decoration-primary-1">
+        <li className="hover:underline decoration-solid decoration-primary-1 z-50">
           <Link to="/aboutus">ABOUT US</Link>
         </li>
       </ul>
