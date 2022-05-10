@@ -12,37 +12,37 @@ const Infos = () => {
         />
       </div>
       <div className="lg:static lg:flex lg:flex-col lg:w-full lg:items-center">
-        <div className="absolute lg:static lg:flex lg:flex-col">
+        <div className="absolute lg:static lg:flex lg:flex-col lg:w-60">
           <h1 className="font-title text-main-2 text-6xl w-9/12 pt-32 lg:pt-0 lg:w-full">
             200
           </h1>
-          <p className="font-primary lg:text-white lg:px-2 lg:font-primary">
+          <p className="font-primary lg:text-white lg:font-primary">
             {" "}
             Men and women astronauts <br /> on our plateform{" "}
           </p>
         </div>
-        <div className="absolute right-96 mt-20 -ml-96 pt-14 lg:static lg:flex lg:flex-col lg:m-0 lg:p-0 ">
+        <div className="absolute right-96 mt-20 -ml-96 pt-14 lg:static lg:flex lg:flex-col lg:m-0 lg:p-0 lg:w-60">
           <h2 className="font-title text-main-2 text-6xl pt-44 lg:pt-16 lg:w-full">
             1500
           </h2>
-          <p className="font-primary text-main-2 lg:text-white lg:px-2">
+          <p className="font-primary text-main-2 lg:text-white">
             {" "}
             Space missions completed <br /> with success{" "}
           </p>
         </div>
-        <div className="absolute left-96 ml-96 mt-72 pt-28 lg:static lg:flex lg:flex-col lg:m-0 lg:p-0">
+        <div className="absolute left-96 ml-96 mt-72 pt-28 lg:static lg:flex lg:flex-col lg:m-0 lg:p-0 lg:w-60">
           <h3 className="font-title text-main-2 text-6xl w-9/12 pt-32 lg:pt-16 lg:w-full">
             0.5%
           </h3>
-          <p className="font-primary lg:text-white lg:px-2">
+          <p className="font-primary lg:text-white">
             Of death accidents among <br /> all the missions
           </p>
         </div>
-        <div className="absolute right-96 pr-96 mt-72 pt-60 lg:static lg:flex lg:flex-col lg:m-0 lg:p-0">
+        <div className="absolute right-96 pr-96 mt-72 pt-60 lg:static lg:flex lg:flex-col lg:m-0 lg:p-0 lg:w-60">
           <h3 className="font-title text-main-2 text-6xl w-9/12 pt-32 lg:pt-16 lg:w-full">
             3%
           </h3>
-          <p className="font-primary hidden lg:block lg:text-white lg:px-2">
+          <p className="font-primary hidden lg:block lg:text-white">
             About online commission on <br /> each mission
           </p>
           <div className="absolute left-48 pl-96 lg:static lg:flex lg:flex-col lg:m-0 lg:pl-0 lg:pt-16 lg:text-main-2">
