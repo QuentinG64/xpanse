@@ -9,7 +9,7 @@ module.exports = {
       lg: { max: "1023px" },
       // => @media (max-width: 1023px) { ... }
 
-      xs: { min: "769px" },
+      xs: { min: "1023px" },
       // => @media (min-width: 769px) { ... }
 
       md: { max: "767px" },
@@ -46,6 +46,7 @@ module.exports = {
         recruitPage: "url('/assets/images/recruiterBackground.png')",
         freePage: "url('/assets/images/freelanceBackground.png')",
         goldenTicket: "url('/assets/images/goldenTicketBg.png')",
+        astronaut: "url('/assets/images/astronautAboutUs.png')"
       },
     },
   },

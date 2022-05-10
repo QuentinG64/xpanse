@@ -5,6 +5,7 @@ import NavBar from "./NavBar";
 
 const TicketWin = () => {
   const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
@@ -20,7 +21,7 @@ const TicketWin = () => {
         <NavBar />
         <h1 className="font-title text-main-2 text-6xl w-9/12 pt-32 pl-7 sm:text-4xl">
           <span className="text-8xl text-primary-1 sm:text-5xl">WOOOOH!</span>{" "}
-          <br /> YOU JUST
+          YOU JUST
           <span className="text-7xl text-primary-1 sm:text-4xl">
             WIN A FREE TICKET
           </span>{" "}

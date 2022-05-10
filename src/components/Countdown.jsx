@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 
 function Countdown() {
-  const [timer, setTimer] = React.useState(150);
+  const [timer, setTimer] = useState(150);
 
   React.useEffect(() => {
     // eslint-disable-next-line no-unused-vars

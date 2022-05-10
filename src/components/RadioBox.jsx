@@ -16,7 +16,7 @@ const RadioBox = () => {
         name="social"
         className="form-checkbox h-4 w-4 accent-secondary-1"
       />
-      Twittter <br />
+      Twitter <br />
       <input
         type="radio"
         value="Instagram"

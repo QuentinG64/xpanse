@@ -38,7 +38,6 @@ const Prehome = () => {
               </Phrase>{" "}
             </div>
           </div>
-          {/* <img className="mt-5 w-1/2" src="../assets/images/xpanseLogoMainPage.png" alt="Logo"></img> */}
           <h3 className="font-title-second text-main-3 mt-6 z-20 lg:m-10">
             {" "}
             Spatial recruitment plateform
@@ -53,14 +52,10 @@ const Prehome = () => {
                   I am a
                 </h3>
                 <div
-                  onKeyDown={() => {
-                    freelancer();
-                  }}
+                  onKeyDown={freelancer}
                   tabIndex={0}
                   role="button"
-                  onClick={() => {
-                    freelancer();
-                  }}
+                  onClick={freelancer}
                 >
                   <Button text="Freelancer" />
                 </div>

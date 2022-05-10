@@ -1,6 +1,5 @@
 import "./App.css";
-// eslint-disable-next-line no-unused-vars
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import GoldenTicket from "./components/GoldenTicket";
 import PreHome from "./components/PreHome";
 import Freelance from "./components/FreelancePage";
