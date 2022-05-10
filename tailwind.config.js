@@ -10,7 +10,11 @@ module.exports = {
       // => @media (max-width: 1023px) { ... }
 
       xs: { min: "1023px" },
+<<<<<<< HEAD
       // => @media (min-width: 769px) { ... }
+=======
+      // => @media (min-width: 1023px) { ... }
+>>>>>>> 64f9c1ce8936ea783e499a1f1213dcfb290348e8
 
       md: { max: "767px" },
       // => @media (max-width: 767px) { ... }

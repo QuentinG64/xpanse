@@ -3,7 +3,7 @@ import Button from "./Button";
 
 const Infos = () => {
   return (
-    <div className="bg-main-1 text-main-2 lg:text-primary-1 flex flex-row lg:bg-astronaut lg:bg-no-repeat lg:bg-cover lg:mt-24">
+    <div className="bg-main-1 text-main-2 lg:text-primary-1 flex flex-row lg:bg-no-repeat lg:bg-cover lg:mt-24">
       <div className="mt-20 mb-20 lg:hidden">
         <img
           src="../assets/images/astronautAboutUs.png"
