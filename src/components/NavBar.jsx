@@ -8,7 +8,7 @@ const NavBar = () => {
   // --> change nav background on scroll <---
   const [color, setColor] = useState(false);
   const changeColor = () => {
-    if (window.scrollY >= 20) {
+    if (window.scrollY >= 10) {
       setColor(true);
     } else {
       setColor(false);
