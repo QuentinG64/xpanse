@@ -5,10 +5,10 @@ import Button from "./Button";
 import NavBar from "./NavBar";
 
 const GoldenTicket = () => {
-  // Création usestate pour le next launch via API
+  // useState created for the next launch through API
   const [launch, setLaunch] = useState("");
 
-  // Création de l'appel API pour le futur launch spatial
+  // Function created / calling API
   const getLaunch = () => {
     axios
       .get(`https://ll.thespacedevs.com/2.2.0/launch/upcoming`)
@@ -19,13 +19,12 @@ const GoldenTicket = () => {
       .catch((err) => console.log(err));
   };
 
-  // Création useEffect pour le chargement du state au démarrage de la page GoldenTicket
-
+  //UseEffect to ping getLaunch() when GoldenTicket is mounted
   useEffect(() => {
     getLaunch();
   }, []);
 
-  // fonction retournant la variable message indiquant si c'est win ou loose
+  // Function managing routes between win or loose goldenticket status
   const navigate = useNavigate();
   const loose = () => {
     navigate("/goldenticket/loose");
@@ -36,17 +35,19 @@ const GoldenTicket = () => {
   };
   const willYouWin = () => {
     const probability = Math.random();
+    // Modify below the value to set appropriate parameters about user's luck
     if (probability >= 0.2) {
       return loose();
     }
     return win();
   };
 
+  // Slicing data in 2 constants
   const launchTime = launch.slice(11, 19);
   const launchDate = launch.slice(0, 10);
 
   return (
-    // INITAL PAGE GOLDEN TICKET -- INTRODUCTION
+    // INITAL PAGE GOLDEN TICKET
     <div className="h-screen bg-cover bg-goldenTicket text-main-2">
       <NavBar />
       <h1 className="font-title text-main-2 text-3xl w-9/12 pt-32 pb-4 pl-[3%] sm:text-3xl sm:w-screen sm:text-center sm:pr-[3%] sm:pt-[20%]">
@@ -65,14 +66,13 @@ const GoldenTicket = () => {
         at {launchTime} GMT
       </div>
 
-      {/* Il faut qu'au click sur le component Button, en 
-      fonction du résultat forTheWin, cela m'affiche la page loose ou win */}
+      {/*When clicking on the button, depending the result of the function willYouWin, we will have TicketLoose or TicketWin mounted*/}
+
       <div
         role="button"
         tabIndex={0}
         className="mt-1 pl-[3%] sm:flex sm:justify-center sm:pl-0 sm:pt-5"
         onKeyDown={willYouWin}
-        // ici modifier la valeur dans le ternaire de result pour définir la probabilité de gain
         onClick={willYouWin}
       >
         <Button text="HOW IS YOUR LUCK?" />
