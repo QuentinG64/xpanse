@@ -45,7 +45,7 @@ const NavBar = () => {
             </Link>
           </p>
           <div className="hidden lg:w-screen lg:flex lg:flex-col lg:items-center lg:h-[15%]">
-            <div className="xs:hidden absolute top-6">
+            <div className={active ? "hidden" : "xs:hidden absolute top-6"}>
               <Link to="/">
                 <Phrase margin={15} size={20} color="white">
                   <Char char="X" delay={0} />
