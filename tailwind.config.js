@@ -46,6 +46,7 @@ module.exports = {
         recruitPage: "url('/assets/images/recruiterBackground.png')",
         freePage: "url('/assets/images/freelanceBackground.png')",
         goldenTicket: "url('/assets/images/goldenTicketBg.png')",
+        astronaut: "url('/assets/images/astronautAboutUs.png')"
       },
     },
   },

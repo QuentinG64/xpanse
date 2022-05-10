@@ -11,9 +11,7 @@ const AboutUs = () => {
       <NavBar />
       <Video />
       <BlockTxt />
-      <div className="sm:hidden">
-        <Infos />
-      </div>
+      <Infos />
       <Footer />
     </div>
   );
