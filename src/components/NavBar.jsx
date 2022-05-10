@@ -8,7 +8,7 @@ const NavBar = () => {
   // --> change nav background on scroll <---
   const [color, setColor] = useState(false);
   const changeColor = () => {
-    if (window.scrollY >= 20) {
+    if (window.scrollY >= 10) {
       setColor(true);
     } else {
       setColor(false);
@@ -19,8 +19,7 @@ const NavBar = () => {
   const [active, setActive] = useState(false);
   const showMenu = () => {
     setActive(!active);
-    color & active & setColor(false);
-    color & !active & setColor(true);
+    if (color) setColor(false);
   };
 
   return (
@@ -28,11 +27,11 @@ const NavBar = () => {
       <div
         className={
           color
-            ? "bg-black/10 backdrop-blur-sm fixed w-full z-30 h-[10%]"
-            : "bg-transparent fixed w-full z-50 lg:bg-transparent"
+            ? "bg-black/10 backdrop-blur-sm fixed flex justify-around items-center w-full z-30 h-[10%]"
+            : "bg-transparent fixed flex justify-around items-center w-full z-30 h-[10%] lg:bg-transparent"
         }
       >
-        <nav className="font-title flex justify-between bg-transparent text-main-2 py-2 sm:justify-around">
+        <nav className="font-title flex justify-between bg-transparent items-center text-main-2 sm:justify-around w-full">
           <p className="w-1/5 flex justify-around lg:hidden">
             <Link to="/">
               <Phrase margin={15} size={20} color="white">
@@ -46,7 +45,7 @@ const NavBar = () => {
             </Link>
           </p>
           <div className="hidden lg:w-screen lg:flex lg:flex-col lg:items-center lg:h-[15%]">
-            <div className="xs:hidden absolute top-6">
+            <div className={active ? "hidden" : "xs:hidden absolute top-6"}>
               <Link to="/">
                 <Phrase margin={15} size={20} color="white">
                   <Char char="X" delay={0} />
