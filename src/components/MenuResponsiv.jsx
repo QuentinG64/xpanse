@@ -9,7 +9,7 @@ const MenuResponsiv = ({ showMenu, active }) => {
       <ul
         className={
           active
-            ? "flex-col flex items-center fixed inset-0 left-1/2 bg-black/20 backdrop-blur-sm gap-20 justify-center"
+            ? "flex-col flex items-center fixed inset-0 full bg-black backdrop-blur-sm gap-20 justify-center"
             : "hidden"
         }
       >

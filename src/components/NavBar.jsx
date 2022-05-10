@@ -19,7 +19,7 @@ const NavBar = () => {
   const [active, setActive] = useState(false);
   const showMenu = () => {
     setActive(!active);
-    color && setColor(false);
+    if (color) setColor(false);
   };
 
   return (
