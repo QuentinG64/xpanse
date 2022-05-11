@@ -34,12 +34,13 @@ const BlockTxt = () => {
             <h3 className="text-main-2 text-sm ">is lovely</h3>
           </div>
           <h4 className="font-primary text-main-2 text-sm ">
-            SpaceX has gained worldwide attention for a series of historic
-            milestones. It is the only private company capable of returning a
-            spacecraft from low-Earth orbit, and in 2012 our Dragon spacecraft
-            became the first commercial spacecraft to deliver cargo to and from
-            the International Space Station. And in 2020, SpaceX became the
-            first private company to take humans there as well.
+            Xpanse agency has gained worldwide attention for a series of
+            historic milestones. It is the only private company capable of
+            returning a spacecraft from low-Earth orbit, and in 2012 our Dragon
+            spacecraft became the first commercial spacecraft to deliver cargo
+            to and from the International Space Station. And in 2020, Xpanse
+            agency became the first private company to take humans there as
+            well.
           </h4>
           <div className="flex flex-row mt-4 items-center">
             <img
